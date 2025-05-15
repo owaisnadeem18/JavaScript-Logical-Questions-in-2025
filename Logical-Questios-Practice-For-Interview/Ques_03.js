@@ -19,17 +19,14 @@ const checkPalindrome = (str) => {
 
     // Check for Palindrome: 
 
-    let isPalidrome = false
-
-    if (str == reversed_str.toLowerCase()) {
-        isPalidrome = true // use of flag:
+    if (str.toLowerCase() == reversed_str.toLowerCase()) {
         return (`String "${str}" is Palindrome`)
     }
     
-    if (!isPalidrome) {
+    else {
         return (`String "${str}" is non Palindrome`) 
     }
 
 }
 
-console.log(checkPalindrome("maham"))
+console.log(checkPalindrome("madam"))
