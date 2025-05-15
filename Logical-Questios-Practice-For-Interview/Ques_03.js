@@ -9,27 +9,27 @@
 
 // "hello" → false
 
-// const checkPalindrome = (str) => {
+const checkPalindrome = (str) => {
 
-//     let reversed_str = ""
+    let reversed_str = ""
 
-//     for(let char of str) {
-//         reversed_str = char + reversed_str 
-//     }
+    for(let char of str) {
+        reversed_str = char + reversed_str 
+    }
 
-//     // Check for Palindrome: 
+    // Check for Palindrome: 
 
-//     let isPalidrome = false
+    let isPalidrome = false
 
-//     if (str == reversed_str.toLowerCase()) {
-//         isPalidrome = true // use of flag:
-//         return (`String ${str} is Palindrome`)
-//     }
+    if (str == reversed_str.toLowerCase()) {
+        isPalidrome = true // use of flag:
+        return (`String "${str}" is Palindrome`)
+    }
     
-//     if (!isPalidrome) {
-//         return (`String "${str}" is non Palindrome`) 
-//     }
+    if (!isPalidrome) {
+        return (`String "${str}" is non Palindrome`) 
+    }
 
-// }
+}
 
-// console.log(checkPalindrome("rre"))
+console.log(checkPalindrome("maham"))
