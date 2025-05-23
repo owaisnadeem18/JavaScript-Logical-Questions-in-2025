@@ -44,10 +44,41 @@
 
 // 🔸 2. Objects (Shallow Copy Confusion)
 
-let obj1 = { name: "Ali" };
-let obj2 = { ...obj1 };
-obj2.name = "Ahmed";
+// let obj1 = { name: "Ali" };
+// let obj2 = { ...obj1 };
+// obj2.name = "Ahmed";
 
-console.log(obj1.name);
+// console.log(obj1.name);
 
-// Output: Ali
+// Output: Ali (Because shallow copy created in this case and obj2 is another object , copied the primitive values only , but in case of modify it will not modify the original one )
+
+// 🔸 3. Objects (Shallow Copy Drawback)
+
+// let obj1 = { person: { name: "Ali" } };
+// let obj2 = { ...obj1 };
+
+// obj2.person.name = "Ahmed";
+
+// console.log(obj1.person.name); 
+
+// Output: Ahmed (It modified the original one , because of nested object , it copied the refrence of it in memory)
+
+// 🔸 5. Hoisting (Function vs Variable)
+
+// console.log(myVar);
+// var myVar = 5;
+
+// Output: undefined (Because the value has not been initialized but the variable has been declared because of var , it has been hoisted)
+
+// 🔸 5. Hoisting (Function vs Variable)
+
+// console.log(myVar);
+// let myVar = 5;
+
+// Output: Error (Because the value has not been hoisted , because of let variable and it will give value error , it does not know who actually is myVar , this is not defined)
+
+// Output:
+// ❌ ReferenceError: Cannot access 'myVar' before initialization
+
+let myVar;
+console.log(myVar);
