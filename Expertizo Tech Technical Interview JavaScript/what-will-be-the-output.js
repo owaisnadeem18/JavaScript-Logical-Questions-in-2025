@@ -98,9 +98,26 @@
 
 // ------------------------------------------- Logical and blocked scope Output questions -------------------------------------------
 
-{
-  let x = 5;
-}
-console.log(x);
+// 1.
 
-// output: not defined 
+// {
+//   let x = 5;
+// }
+// console.log(x);
+
+// output: Refrence Error => not defined (Explanation: let is block-scoped. Outside block, it's not accessible.)
+
+// 2. 
+
+// {
+//   var x = 5;
+// }
+// console.log(x);
+
+// output: 5 (Because of var) Explanation: var is function-scoped, not block-scoped, so x is accessible outside the block.
+
+// 3. 
+
+const a = 10;
+a = 2
+console.log(a); // ❌ ReferenceError
