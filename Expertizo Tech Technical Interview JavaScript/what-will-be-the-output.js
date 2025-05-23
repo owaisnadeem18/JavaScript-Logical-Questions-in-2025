@@ -80,5 +80,27 @@
 // Output:
 // ❌ ReferenceError: Cannot access 'myVar' before initialization
 
-let myVar;
-console.log(myVar);
+// let myVar;
+// console.log(myVar);
+
+// Output: undefined
+
+// ------------------------------------------- Mcq's related to const: -------------------------------------------
+
+// 3. Which statement about const is TRUE?
+// A. const variables can be reassigned.
+// B. const variables must be initialized at declaration.
+// C. const is function scoped.
+// D. const is hoisted and initialized with undefined.
+
+// ✅ Answer: B
+// Explanation: const variables must be initialized at
+
+// ------------------------------------------- Logical and blocked scope Output questions -------------------------------------------
+
+{
+  let x = 5;
+}
+console.log(x);
+
+// output: not defined 
