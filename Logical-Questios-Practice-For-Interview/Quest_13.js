@@ -1,21 +1,29 @@
-// Write a JavaScript function to count the occurences of any specified character in a word
+// Find the total number of occurences of alphabets in a string
 
-const countOcc = (str) => {
+let str = "owais Nadeem"
 
-    let occurences = {}
+findOcc = string => {
+    let AllStrings = string.toLowerCase()
+    let splitted_str = AllStrings.split("")
+    
+    let obj = {
+    
+    }
 
-    str.trim().split("").forEach(function(a) {
-        if (a===" ") return
-        if (occurences.hasOwnProperty(a)) {
-            occurences[a]++
+    splitted_str.forEach((item) => {
+
+        if (obj.hasOwnProperty(item)) {
+            obj[item]++
         }
+        
         else {
-            occurences[a] = 1
+            obj[item] = 1
         }
+
     })
 
-    return occurences
+    return obj
 
 }
 
-console.log(countOcc("Owais Nadeem"))
+console.log(findOcc(str))
