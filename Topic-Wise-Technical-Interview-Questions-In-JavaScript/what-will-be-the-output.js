@@ -118,6 +118,7 @@
 
 // 3. 
 
-const a = 10;
-a = 2
-console.log(a); // ❌ ReferenceError
+// const a = 10;
+// a = 2
+// console.log(a); // ❌ ReferenceError
+
