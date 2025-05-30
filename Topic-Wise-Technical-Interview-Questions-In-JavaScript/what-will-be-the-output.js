@@ -136,3 +136,6 @@ const fn = outer();
 fn(); // Output : 1
 fn(); // Output : 2
 fn(); // Output : 3
+
+// -------------------- MCQs related to Promises ------------------
+
