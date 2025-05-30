@@ -139,3 +139,7 @@ fn(); // Output : 3
 
 // -------------------- MCQs related to Promises ------------------
 
+async function test() {
+  return 5;
+}
+test().then(console.log);
