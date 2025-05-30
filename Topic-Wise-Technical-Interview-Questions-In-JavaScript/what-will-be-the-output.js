@@ -122,3 +122,17 @@
 // a = 2
 // console.log(a); // ❌ ReferenceError
 
+// ------------ MCQ's related to closures ------------------
+
+function outer() {
+  let count = 0;
+  return function inner() { 
+    count++;
+    console.log(count);
+  }
+}
+
+const fn = outer();
+fn(); // Output : 1
+fn(); // Output : 2
+fn(); // Output : 3
