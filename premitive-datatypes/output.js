@@ -6,4 +6,4 @@
 
 // console.log(typeof NaN) // Number
 
-console.log(typeof undefined) // undefined
+// console.log(typeof undefined) // undefined
