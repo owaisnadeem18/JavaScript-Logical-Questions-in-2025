@@ -19,3 +19,6 @@
 // console.log(typeof(NaN)) // Number
 
 // console.log(typeof undefined) // Undefined
+
+// let a
+// console.log(a) // undefined
