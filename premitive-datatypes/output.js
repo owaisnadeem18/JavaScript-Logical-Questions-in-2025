@@ -10,6 +10,10 @@
 
 // console.log(NaN === NaN)
 
-let bigNum = 1234567890123456789012345678901234567890n;
+// let bigNum = 1234567890123456789012345678901234567890n;
 
-console.log(typeof bigNum)
+// console.log(typeof bigNum)
+
+// console.log(typeof Number("Owais")) // always prints number
+
+// console.log(typeof(NaN)) // Number
