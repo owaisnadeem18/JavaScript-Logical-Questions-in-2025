@@ -22,3 +22,7 @@
 
 // let a
 // console.log(a) // undefined
+
+// console.log(a) // Refrence Error
+
+// let a 
