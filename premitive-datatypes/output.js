@@ -17,3 +17,5 @@
 // console.log(typeof Number("Owais")) // always prints number
 
 // console.log(typeof(NaN)) // Number
+
+// console.log(typeof undefined) // Undefined
