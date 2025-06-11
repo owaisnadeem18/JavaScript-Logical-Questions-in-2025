@@ -11,7 +11,7 @@ let AnagramChecker = (a,b) => {
     
     }
 
-    return "Non anagrams"
+    return "Non anagrams" 
 
 }
 
