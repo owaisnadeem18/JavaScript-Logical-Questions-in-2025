@@ -11,3 +11,4 @@ let FindSecondHighestNum = (array) => {
 }
 
 console.log(`The highest number in an array is => ${FindSecondHighestNum(arr)}`)
+ 
