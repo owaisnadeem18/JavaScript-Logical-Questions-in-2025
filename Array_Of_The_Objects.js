@@ -7,8 +7,8 @@ let studentData = [
     isGraduated: true,
     address: {
       city: "Lahore",
-      country: "Pakistan"
-    }
+      country: "Pakistan",
+    },
   },
   {
     id: 2,
@@ -18,8 +18,8 @@ let studentData = [
     isGraduated: false,
     address: {
       city: "Karachi",
-      country: "Pakistan"
-    }
+      country: "Pakistan",
+    },
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ let studentData = [
     isGraduated: true,
     address: {
       city: "Islamabad",
-      country: "Pakistan"
-    }
+      country: "Pakistan",
+    },
   },
   {
     id: 4,
@@ -40,29 +40,44 @@ let studentData = [
     isGraduated: false,
     address: {
       city: "Peshawar",
-      country: "Pakistan"
-    }
-  }
+      country: "Pakistan",
+    },
+  },
 ];
 
 // Task # 01 Find the marks Average of the students from this above array of the object
 
+// Now show the results on UI
 
-// Now show the results on UI 
-document.querySelector("#entire-array").innerText = JSON.stringify( studentData , null ,2)  
+// const FindAverage = (Array_Of_Object) => {
+//     let Students_Average_Array = []
 
-const FindAverage = (Array_Of_Object) => {
-    let Students_Average_Array = []
+//     Array_Of_Object.map((item) => {
+//         let one_Student_Total_marks = item.marks.reduce( (a , b) => a+b )
+//         let average = (one_Student_Total_marks * 100)/300
+//         Students_Average_Array.push({[item.name] : average.toFixed(2)})
+//     })
+
+//     return Students_Average_Array
+
+// }
+
+// console.log(FindAverage(studentData))
+
+function getPassedStudents(studentData) {
+  let passed_students = []
+  let students_Avg = [];
+  studentData.map(item => {
+    let obtained_Marks =  item.marks.reduce((a, b) => a + b)
+    let students_percentage = (obtained_Marks * 100)/300
+    students_Avg.push({[item.name] : students_percentage.toFixed(2)})
+}
+);
+
+    passed_students = (students_Avg.filter(item => parseFloat(Object.values(item)[0]) > 80  ))
     
-    Array_Of_Object.map((item) => {
-        let one_Student_Total_marks = item.marks.reduce( (a , b) => a+b )
-        let average = (one_Student_Total_marks * 100)/300
-        Students_Average_Array.push({[item.name] : average.toFixed(2)})
-    })
-    
-    document.getElementById("marks-avg-array").innerText = JSON.stringify(  Students_Average_Array)
-    return Students_Average_Array
+    return passed_students
 
 }
 
-console.log(FindAverage(studentData))
+console.log(getPassedStudents(studentData));
