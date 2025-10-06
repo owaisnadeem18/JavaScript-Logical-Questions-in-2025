@@ -5,27 +5,46 @@
 
 // 1. map() + includes()
 
-const students = ["Ali", "Sara", "Owais", "Ahmed"];
-const passed = ["Sara", "Ahmed"];
+// const students = ["Ali", "Sara", "Owais", "Ahmed"];
+// const passed = ["Sara", "Ahmed"];
 
-// you should return an array like follows: 
+// // you should return an array like follows: 
 
-// [
-//   { name: "Ali", passed: false },
-//   { name: "Sara", passed: true },
-//   { name: "Owais", passed: false },
-//   { name: "Ahmed", passed: true }
-// ]
+// // [
+// //   { name: "Ali", passed: false },
+// //   { name: "Sara", passed: true },
+// //   { name: "Owais", passed: false },
+// //   { name: "Ahmed", passed: true }
+// // ]
 
-const studentsResult = []
+// const studentsResult = []
 
-const findResult = (arr1 , arr2) => {
-    return arr1.map((student) => {
-        return {
-            name: student,
-            passed: arr2.includes(student)
-        }
-    })
+// const findResult = (arr1 , arr2) => {
+//     return arr1.map((student) => {
+//         return {
+//             name: student,
+//             passed: arr2.includes(student)
+//         }
+//     })
+// }
+
+// console.log(findResult(students , passed))
+
+
+// Show the name of students in a row with above 80%
+
+const students = [
+  { name: "Ali", score: 85 },
+  { name: "Owais", score: 95 },
+  { name: "Sara", score: 92 },
+  { name: "John", score: 70 },
+];
+
+const FilterA1Students = (students) => {
+    const passStudents = students.filter((item) => item.score > 80)
+    
+    const A1StudentsNamesArr = passStudents.map((stud) => stud.name )
+    return A1StudentsNamesArr
 }
 
-console.log(findResult(students , passed))
+console.log(FilterA1Students(students))
