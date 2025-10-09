@@ -85,15 +85,28 @@
 
 // 2. Find the smallest negative number (most negative) 👉 Use reduce
 
+// const data = [5, -2, 9, -1, -7, 3];
+
+// let mostNegativeNum 
+
+// const findMostNegNum = (arr) => {
+  //   let mostNegativeNum = arr.reduce((a , b) =>
+    //     { return (a < b ? a : b)}
+// )
+//   return mostNegativeNum  
+// }
+
+// console.log(findMostNegNum(data))
+
+// ------------------ Map Array method ----------------------
+
+// 9. Replace all negative numbers with text negative if any number is negative in the array (boolean check)
+
 const data = [5, -2, 9, -1, -7, 3];
 
-let mostNegativeNum 
-
-const findMostNegNum = (arr) => {
-  let mostNegativeNum = arr.reduce((a , b) =>
-    { return (a < b ? a : b)}
-)
-  return mostNegativeNum  
+const replaceNegNumbers = (arr) => {
+  const replacement = arr.map((item) => item < 0 ? "Negative" : item)
+  return replacement
 }
 
-console.log(findMostNegNum(data))
+console.log(replaceNegNumbers(data))
