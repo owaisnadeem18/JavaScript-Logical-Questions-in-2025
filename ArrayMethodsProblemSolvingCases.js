@@ -1,14 +1,14 @@
 // 🔑 Most Important Array Methods for Interview Problem Solving
 // 🔹 Searching & Checking
 
-// ------------------- Question # 01 for problem solving array methods -----------------------------
+// ------------------- Questions for problem solving array methods -----------------------------
 
 // 1. map() + includes()
 
 // const students = ["Ali", "Sara", "Owais", "Ahmed"];
 // const passed = ["Sara", "Ahmed"];
 
-// // you should return an array like follows: 
+// // you should return an array like follows:
 
 // // [
 // //   { name: "Ali", passed: false },
@@ -30,6 +30,7 @@
 
 // console.log(findResult(students , passed))
 
+// 2. Filter Method in Array
 
 // Show the name of students in a row with above 80%
 
@@ -42,7 +43,7 @@
 
 // const FilterA1Students = (students) => {
 //     const passStudents = students.filter((item) => item.score > 80)
-    
+
 //     const A1StudentsNamesArr = passStudents.map((stud) => stud.name )
 //     return A1StudentsNamesArr
 // }
@@ -57,10 +58,42 @@
 //   { name: "John", marks: 60 }
 // ];
 
-// // only returns that first object by iterating the array , where the condition meet 
+// // only returns that first object by iterating the array , where the condition meet
 // const findTopper = (studArray) => {
 //   const answer = studArray.find((student) => student.marks > 105)
 //   return answer
 // }
 
 // console.log(findTopper(students))
+
+// ------------------------------------------ 5. Find First Negative Number (find) ------------------------------------------
+
+// Input: [5, -2, 9, -1]
+
+// const data = [5, -2, 9, -1]
+
+// const findNegativeNumber = (arr) => {
+//   const data = arr.find((item) => item < 1 )
+//   return data
+// }
+
+// console.log(findNegativeNumber(data))
+
+// Output: -2
+
+// -------------------------------------------
+
+// 2. Find the smallest negative number (most negative) 👉 Use reduce
+
+const data = [5, -2, 9, -1, -7, 3];
+
+let mostNegativeNum 
+
+const findMostNegNum = (arr) => {
+  let mostNegativeNum = arr.reduce((a , b) =>
+    { return (a < b ? a : b)}
+)
+  return mostNegativeNum  
+}
+
+console.log(findMostNegNum(data))
