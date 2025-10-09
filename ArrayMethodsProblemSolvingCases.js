@@ -33,18 +33,34 @@
 
 // Show the name of students in a row with above 80%
 
-const students = [
-  { name: "Ali", score: 85 },
-  { name: "Owais", score: 95 },
-  { name: "Sara", score: 92 },
-  { name: "John", score: 70 },
-];
+// const students = [
+//   { name: "Ali", score: 85 },
+//   { name: "Owais", score: 95 },
+//   { name: "Sara", score: 92 },
+//   { name: "John", score: 70 },
+// ];
 
-const FilterA1Students = (students) => {
-    const passStudents = students.filter((item) => item.score > 80)
+// const FilterA1Students = (students) => {
+//     const passStudents = students.filter((item) => item.score > 80)
     
-    const A1StudentsNamesArr = passStudents.map((stud) => stud.name )
-    return A1StudentsNamesArr
-}
+//     const A1StudentsNamesArr = passStudents.map((stud) => stud.name )
+//     return A1StudentsNamesArr
+// }
 
-console.log(FilterA1Students(students))
+// console.log(FilterA1Students(students))
+
+// ---------------- Array method (Find) ----------------
+
+// const students = [
+//   { name: "Ali", marks: 85 },
+//   { name: "Sara", marks: 92 },
+//   { name: "John", marks: 60 }
+// ];
+
+// // only returns that first object by iterating the array , where the condition meet 
+// const findTopper = (studArray) => {
+//   const answer = studArray.find((student) => student.marks > 105)
+//   return answer
+// }
+
+// console.log(findTopper(students))
