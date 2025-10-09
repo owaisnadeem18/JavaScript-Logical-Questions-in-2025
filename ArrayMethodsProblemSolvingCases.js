@@ -87,13 +87,13 @@
 
 // const data = [5, -2, 9, -1, -7, 3];
 
-// let mostNegativeNum 
+// let mostNegativeNum
 
 // const findMostNegNum = (arr) => {
-  //   let mostNegativeNum = arr.reduce((a , b) =>
-    //     { return (a < b ? a : b)}
+//   let mostNegativeNum = arr.reduce((a , b) =>
+//     { return (a < b ? a : b)}
 // )
-//   return mostNegativeNum  
+//   return mostNegativeNum
 // }
 
 // console.log(findMostNegNum(data))
@@ -102,11 +102,24 @@
 
 // 9. Replace all negative numbers with text negative if any number is negative in the array (boolean check)
 
+// const data = [5, -2, 9, -1, -7, 3];
+
+// const replaceNegNumbers = (arr) => {
+  //   const replacement = arr.map((item) => item < 0 ? "Negative" : item)
+  //   return replacement
+  // }
+  
+  // console.log(replaceNegNumbers(data))
+  
+  // -----------------------------------------------------------
+  
+  // Question:- Replace all negative numbers with negative number's index , if any number is negative in the array (boolean check)
+  
 const data = [5, -2, 9, -1, -7, 3];
 
-const replaceNegNumbers = (arr) => {
-  const replacement = arr.map((item) => item < 0 ? "Negative" : item)
-  return replacement
+const replaceNegWithIndex = (arr) => {
+  const ResultArr = arr.map((item , ind) => item > 0 ? item : `index is ${ind}` )
+  return ResultArr
 }
 
-console.log(replaceNegNumbers(data))
+console.log(replaceNegWithIndex(data))
