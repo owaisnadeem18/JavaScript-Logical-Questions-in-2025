@@ -105,16 +105,16 @@
 // const data = [5, -2, 9, -1, -7, 3];
 
 // const replaceNegNumbers = (arr) => {
-  //   const replacement = arr.map((item) => item < 0 ? "Negative" : item)
-  //   return replacement
-  // }
-  
-  // console.log(replaceNegNumbers(data))
-  
-  // -----------------------------------------------------------
-  
-  // Question:- Replace all negative numbers with negative number's index , if any number is negative in the array (boolean check)
-  
+//   const replacement = arr.map((item) => item < 0 ? "Negative" : item)
+//   return replacement
+// }
+
+// console.log(replaceNegNumbers(data))
+
+// -----------------------------------------------------------
+
+// Question:- Replace all negative numbers with negative number's index , if any number is negative in the array (boolean check)
+
 // const data = [5, -2, 9, -1, -7, 3];
 
 // const replaceNegWithIndex = (arr) => {
@@ -126,7 +126,7 @@
 
 // ---------------------------------------------------------------------
 
-// Detailed (and nested) mock data to practice the array different methods 
+// Detailed (and nested) mock data to practice the array different methods
 
 const platform = [
   {
@@ -182,7 +182,7 @@ const platform = [
           friends: [
             {
               id: 303,
-              name: "Zara",
+              name: "Zara girl",
               chats: [
                 { msg: "Check notes", time: "09:00" },
                 { msg: "Good luck!", time: "09:30" },
@@ -191,7 +191,7 @@ const platform = [
           ],
         },
         {
-          studentId: 202,
+          studentId: 203,
           name: "owais",
           age: 20,
           progress: [
@@ -203,7 +203,7 @@ const platform = [
           friends: [
             {
               id: 303,
-              name: "Zara",
+              name: "Owais Ahmed",
               chats: [
                 { msg: "Check notes", time: "09:00" },
                 { msg: "Good luck!", time: "09:30" },
@@ -216,13 +216,12 @@ const platform = [
   },
 ];
 
-
 // -------------------- Question # 01 -------------------------
 
 // Level 1 (Nested access)
 
 // (i) Get all the student names under the JavaScript Mastery course (use of flatMap method of array).
- 
+
 // const GetAllStudentNames = (array) => {
 //   return array.flatMap(item => item?.instructor?.students.map(studentData => studentData?.name))
 // }
@@ -230,16 +229,23 @@ const platform = [
 // console.log(GetAllStudentNames(platform))
 
 // (ii) Find the modules completed by "Owais".
-const ModulesCompletedByStudent = (StudentsArray) => {
-  const StudentData = StudentsArray.flatMap(item => item?.instructor?.students.filter(studentData => studentData.name.toLowerCase() == "owais" ))
 
-  let CompletedModules = StudentData.flatMap(item => item.progress.filter(module => module.completed ))
+// const ModulesCompletedByStudent = (StudentsArray) => {
+//   const StudentData = StudentsArray.flatMap(item => item?.instructor?.students.filter(studentData => studentData.name.toLowerCase() == "owais" ))
 
-  return CompletedModules.map((item) => item.module )
+//   let CompletedModules = StudentData.flatMap(item => item.progress.filter(module => module.completed ))
 
-} 
+//   return CompletedModules.map((item) => item.module )
 
-console.log( `Completed modules are => ` , ModulesCompletedByStudent(platform))
+// }
 
-// Extract all the friend names of Owais.
+// console.log( `Completed modules are => ` , ModulesCompletedByStudent(platform))
 
+// (iii) Extract all the friend names of Owais.
+
+const ExtractFriendNamesOfOwais = (StudentsArray) => {
+  const studentsData = StudentsArray;
+  return studentsData.flatMap((item) => item?.instructor?.students.filter((item) => item?.name.toLowerCase() == "owais")).flatMap((item) => item.friends?.map(friend => friend?.name))
+};
+
+console.log(ExtractFriendNamesOfOwais(platform));
