@@ -282,9 +282,11 @@ const FindAverageScore = (StudentsArray) => {
     hinaProgress.map((item) => hinaObtainedMarks = item.score + hinaObtainedMarks  )
   }
 
-  let average = ((hinaObtainedMarks * 100) / totalMarks).toFixed(2)
+  let percentage = ((hinaObtainedMarks * 100) / totalMarks).toFixed(2)
 
-  return average
+  const average = hinaObtainedMarks / hinaProgress.length;
+
+  return  `The average is => ${average.toFixed(2)} & the percentage is => ${percentage} `
 
 };
 
