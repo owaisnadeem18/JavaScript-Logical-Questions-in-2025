@@ -243,9 +243,26 @@ const platform = [
 
 // (iii) Extract all the friend names of Owais.
 
-const ExtractFriendNamesOfOwais = (StudentsArray) => {
-  const studentsData = StudentsArray;
-  return studentsData.flatMap((item) => item?.instructor?.students.filter((item) => item?.name.toLowerCase() == "owais")).flatMap((item) => item.friends?.map(friend => friend?.name))
-};
+// const ExtractFriendNamesOfOwais = (StudentsArray) => {
+//   const studentsData = StudentsArray;
+//   return studentsData.flatMap((item) => item?.instructor?.students.filter((item) => item?.name.toLowerCase() == "owais")).flatMap((item) => item.friends?.map(friend => friend?.name))
+// };
 
-console.log(ExtractFriendNamesOfOwais(platform));
+// console.log(ExtractFriendNamesOfOwais(platform));
+
+// X --------------------------------------------------------------------------------------- X 
+
+// Level 2 (Map, Filter, Reduce with nesting)
+
+// Level 02 (i) -----> Return an array of all students who completed all their modules.
+
+const StudentsCompletedModule = (StudentsArray) => {
+  return StudentsArray
+}
+
+console.log(StudentsCompletedModule(platform))
+
+
+// Find the average score of Hina across all modules.
+
+// From all students, collect a single array of all certificates (types only).
