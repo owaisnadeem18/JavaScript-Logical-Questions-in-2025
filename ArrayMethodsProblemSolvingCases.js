@@ -250,22 +250,44 @@ const platform = [
 
 // console.log(ExtractFriendNamesOfOwais(platform));
 
-// X --------------------------------------------------------------------------------------- X 
+// X --------------------------------------------------------------------------------------- X
 
 // Level 2 (Map, Filter, Reduce or any other array method with nesting)
 
 // Level 02 (i) -----> Return an array of all students who completed all their modules. (Use Of 'Every' method of array)
 
-const StudentsCompletedModule = (StudentsArray) => {
-  return StudentsArray.flatMap(item => item?.instructor?.students
-    .filter(studentData => studentData?.progress
-    .every(CourseStatus => CourseStatus?.completed )))
-  .map((NiceStudent) => NiceStudent.name)
-}
+// const StudentsCompletedModule = (StudentsArray) => {
+//   return StudentsArray.flatMap(item => item?.instructor?.students
+//     .filter(studentData => studentData?.progress
+//     .every(CourseStatus => CourseStatus?.completed )))
+//   .map((NiceStudent) => NiceStudent.name)
+// }
 
-console.log(StudentsCompletedModule(platform))
+// console.log(StudentsCompletedModule(platform))
 
+// ---------------------------------------------------------------------------------------
 
-// Find the average score of Hina across all modules.
+// Level 02 (ii) -----> Find the average score of Hina across all modules.
+
+const FindAverageScore = (StudentsArray) => {
+  const hinaProgress = StudentsArray.flatMap((data) =>
+    data?.instructor?.students.filter(student => student?.name.toLowerCase() == "hina")
+    .flatMap(item => item?.progress)
+  )
+
+  let hinaObtainedMarks = 0
+  let totalMarks = hinaProgress.length * 100 
+
+  if (hinaProgress.length > 0) {
+    hinaProgress.map((item) => hinaObtainedMarks = item.score + hinaObtainedMarks  )
+  }
+
+  let average = ((hinaObtainedMarks * 100) / totalMarks).toFixed(2)
+
+  return average
+
+};
+
+console.log(FindAverageScore(platform));
 
 // From all students, collect a single array of all certificates (types only).
