@@ -148,7 +148,10 @@ const platform = [
           ],
           certificates: [
             { type: "Participation", year: 2024 },
-            { type: "Excellence", year: 2025 },
+            { type: "Best Performer", year: 2025 },
+            { type: "Hard Work", year: 2025 },
+            { type: "Topper Software Engineer", year: 2025 },
+            { type: "Consistency", year: 2025 },
           ],
           friends: [
             {
@@ -178,7 +181,7 @@ const platform = [
             { module: "ES7", score: 85, completed: true },
             { module: "Async JS", score: 80, completed: true },
           ],
-          certificates: [{ type: "Participation", year: 2025 }],
+          certificates: [{ type: "Consistency", year: 2025 }],
           friends: [
             {
               id: 303,
@@ -199,7 +202,7 @@ const platform = [
             { module: "Programming", score: 85, completed: true },
             { module: "Flask with Fast API", score: 80, completed: true },
           ],
-          certificates: [{ type: "Participation", year: 2025 }],
+          certificates: [{ type: "Hard Work", year: 2025 }],
           friends: [
             {
               id: 303,
@@ -269,27 +272,35 @@ const platform = [
 
 // Level 02 (ii) -----> Find the average score of Hina across all modules.
 
-const FindAverageScore = (StudentsArray) => {
-  const hinaProgress = StudentsArray.flatMap((data) =>
-    data?.instructor?.students.filter(student => student?.name.toLowerCase() == "hina")
-    .flatMap(item => item?.progress)
-  )
+// const FindAverageScore = (StudentsArray) => {
+//   const hinaProgress = StudentsArray.flatMap((data) =>
+//     data?.instructor?.students.filter(student => student?.name.toLowerCase() == "hina")
+//     .flatMap(item => item?.progress)
+//   )
 
-  let hinaObtainedMarks = 0
-  let totalMarks = hinaProgress.length * 100 
+//   let hinaObtainedMarks = 0
+//   let totalMarks = hinaProgress.length * 100 
 
-  if (hinaProgress.length > 0) {
-    hinaProgress.map((item) => hinaObtainedMarks = item.score + hinaObtainedMarks  )
-  }
+//   if (hinaProgress.length > 0) {
+//     hinaProgress.map((item) => hinaObtainedMarks = item.score + hinaObtainedMarks  )
+//   }
 
-  let percentage = ((hinaObtainedMarks * 100) / totalMarks).toFixed(2)
+//   let percentage = ((hinaObtainedMarks * 100) / totalMarks).toFixed(2)
 
-  const average = hinaObtainedMarks / hinaProgress.length;
+//   const average = hinaObtainedMarks / hinaProgress.length;
 
-  return  `The average is => ${average.toFixed(2)} & the percentage is => ${percentage} `
+//   return  `The average is => ${average.toFixed(2)} & the percentage is => ${percentage} `
 
-};
+// };
 
-console.log(FindAverageScore(platform));
+// console.log(FindAverageScore(platform));
 
-// From all students, collect a single array of all certificates (types only).
+// Level 02 (iii) -----> From all students, collect a single array of all certificates (types only).
+
+const AllCertificates = (array) => {
+  return [... new Set (array.flatMap(item => item?.instructor?.students.flatMap(item => item?.certificates.map(certificatesData => certificatesData.type )) )
+ )] }
+
+console.log(AllCertificates(platform))
+
+practiced set with array methods
