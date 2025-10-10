@@ -190,6 +190,27 @@ const platform = [
             },
           ],
         },
+        {
+          studentId: 202,
+          name: "owais",
+          age: 20,
+          progress: [
+            { module: "Computer Science", score: 95, completed: true },
+            { module: "Programming", score: 85, completed: true },
+            { module: "Flask with Fast API", score: 80, completed: true },
+          ],
+          certificates: [{ type: "Participation", year: 2025 }],
+          friends: [
+            {
+              id: 303,
+              name: "Zara",
+              chats: [
+                { msg: "Check notes", time: "09:00" },
+                { msg: "Good luck!", time: "09:30" },
+              ],
+            },
+          ],
+        },
       ],
     },
   },
@@ -202,12 +223,23 @@ const platform = [
 
 // (i) Get all the student names under the JavaScript Mastery course (use of flatMap method of array).
  
-const GetAllStudentNames = (array) => {
-  return array.flatMap(item => item?.instructor?.students.map(studentData => studentData?.name))
-}
+// const GetAllStudentNames = (array) => {
+//   return array.flatMap(item => item?.instructor?.students.map(studentData => studentData?.name))
+// }
 
-console.log(GetAllStudentNames(platform))
+// console.log(GetAllStudentNames(platform))
 
-// Find the modules completed by "Owais".
+// (ii) Find the modules completed by "Owais".
+const ModulesCompletedByStudent = (StudentsArray) => {
+  const StudentData = StudentsArray.flatMap(item => item?.instructor?.students.filter(studentData => studentData.name.toLowerCase() == "owais" ))
+
+  let CompletedModules = StudentData.flatMap(item => item.progress.filter(module => module.completed ))
+
+  return CompletedModules.map((item) => item.module )
+
+} 
+
+console.log( `Completed modules are => ` , ModulesCompletedByStudent(platform))
+
 // Extract all the friend names of Owais.
 
