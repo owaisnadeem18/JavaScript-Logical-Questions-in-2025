@@ -297,10 +297,8 @@ const platform = [
 
 // Level 02 (iii) -----> From all students, collect a single array of all certificates (types only).
 
-const AllCertificates = (array) => {
-  return [... new Set (array.flatMap(item => item?.instructor?.students.flatMap(item => item?.certificates.map(certificatesData => certificatesData.type )) )
- )] }
+// const AllCertificates = (array) => {
+//   return [... new Set (array.flatMap(item => item?.instructor?.students.flatMap(item => item?.certificates.map(certificatesData => certificatesData.type )) )
+//  )] }
 
-console.log(AllCertificates(platform))
-
-practiced set with array methods
+// console.log(AllCertificates(platform))
