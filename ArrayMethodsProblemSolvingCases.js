@@ -174,8 +174,8 @@ const platform = [
           name: "Hina",
           age: 20,
           progress: [
-            { module: "Basics", score: 95, completed: true },
-            { module: "ES6", score: 85, completed: true },
+            { module: "Advance JS", score: 95, completed: true },
+            { module: "ES7", score: 85, completed: true },
             { module: "Async JS", score: 80, completed: true },
           ],
           certificates: [{ type: "Participation", year: 2025 }],
@@ -252,12 +252,15 @@ const platform = [
 
 // X --------------------------------------------------------------------------------------- X 
 
-// Level 2 (Map, Filter, Reduce with nesting)
+// Level 2 (Map, Filter, Reduce or any other array method with nesting)
 
-// Level 02 (i) -----> Return an array of all students who completed all their modules.
+// Level 02 (i) -----> Return an array of all students who completed all their modules. (Use Of 'Every' method of array)
 
 const StudentsCompletedModule = (StudentsArray) => {
-  return StudentsArray
+  return StudentsArray.flatMap(item => item?.instructor?.students
+    .filter(studentData => studentData?.progress
+    .every(CourseStatus => CourseStatus?.completed )))
+  .map((NiceStudent) => NiceStudent.name)
 }
 
 console.log(StudentsCompletedModule(platform))
