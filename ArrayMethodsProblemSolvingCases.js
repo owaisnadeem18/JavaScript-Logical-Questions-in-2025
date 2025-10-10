@@ -115,11 +115,99 @@
   
   // Question:- Replace all negative numbers with negative number's index , if any number is negative in the array (boolean check)
   
-const data = [5, -2, 9, -1, -7, 3];
+// const data = [5, -2, 9, -1, -7, 3];
 
-const replaceNegWithIndex = (arr) => {
-  const ResultArr = arr.map((item , ind) => item > 0 ? item : `index is ${ind}` )
-  return ResultArr
+// const replaceNegWithIndex = (arr) => {
+//   const ResultArr = arr.map((item , ind) => item > 0 ? item : `index is ${ind}` )
+//   return ResultArr
+// }
+
+// console.log(replaceNegWithIndex(data))
+
+// ---------------------------------------------------------------------
+
+// Detailed (and nested) mock data to practice the array different methods 
+
+const platform = [
+  {
+    id: 1,
+    courseName: "JavaScript Mastery",
+    instructor: {
+      id: 101,
+      name: "John Doe",
+      expertise: ["JavaScript", "React", "Node.js"],
+      students: [
+        {
+          studentId: 201,
+          name: "Owais",
+          age: 22,
+          progress: [
+            { module: "Basics", score: 85, completed: true },
+            { module: "ES6", score: 90, completed: true },
+            { module: "Async JS", score: 70, completed: false },
+          ],
+          certificates: [
+            { type: "Participation", year: 2024 },
+            { type: "Excellence", year: 2025 },
+          ],
+          friends: [
+            {
+              id: 301,
+              name: "Ali",
+              chats: [
+                { msg: "Hey bro", time: "10:00" },
+                { msg: "Practice array methods!", time: "10:05" },
+              ],
+            },
+            {
+              id: 302,
+              name: "Sara",
+              chats: [
+                { msg: "Assignment complete?", time: "11:00" },
+                { msg: "Let's study together", time: "11:10" },
+              ],
+            },
+          ],
+        },
+        {
+          studentId: 202,
+          name: "Hina",
+          age: 20,
+          progress: [
+            { module: "Basics", score: 95, completed: true },
+            { module: "ES6", score: 85, completed: true },
+            { module: "Async JS", score: 80, completed: true },
+          ],
+          certificates: [{ type: "Participation", year: 2025 }],
+          friends: [
+            {
+              id: 303,
+              name: "Zara",
+              chats: [
+                { msg: "Check notes", time: "09:00" },
+                { msg: "Good luck!", time: "09:30" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  },
+];
+
+
+// -------------------- Question # 01 -------------------------
+
+// Level 1 (Nested access)
+
+// (i) Get all the student names under the JavaScript Mastery course (use of flatMap method of array).
+ 
+const GetAllStudentNames = (array) => {
+  return array.flatMap(item => item?.instructor?.students.map(studentData => studentData?.name))
 }
 
-console.log(replaceNegWithIndex(data))
+console.log(GetAllStudentNames(platform))
+
+// Find the modules completed by "Owais".
+// Extract all the friend names of Owais.
+
