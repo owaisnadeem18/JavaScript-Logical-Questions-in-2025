@@ -203,11 +203,19 @@ const users = [
 
 // (ii) Get the initials of all users. (e.g. "Owais Nadeem" → "O.N.")
 
-const getInitialsOfUsers = (usersArray) => {
-  return usersArray.map(item => item.name.split(" ").map(word => word[0]).join(".") + "." )
-}
+// const getInitialsOfUsers = (usersArray) => {
+//   return usersArray.map(item => item.name.split(" ").map(word => word[0]).join(".") + "." )
+// }
 
-console.log(getInitialsOfUsers(users))
+// console.log(getInitialsOfUsers(users))
+
+// (iii) Find all users whose names include the letter "a" (case-insensitive)
+
+// const findUsersHavingCharA = (array , key) => {
+//   return array.filter((item) => item[key].toLowerCase().includes("a")).map(item => item?.name)
+// }
+
+// console.log(findUsersHavingCharA(users , "name" ))
 
 // ------------------------------------------------------------------------- 
 
