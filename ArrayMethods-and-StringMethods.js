@@ -19,69 +19,69 @@
 
 // console.log(FindPalindromic(sentence))
 
-const companies = [
-  {
-    id: 1,
-    name: "TechVerse",
-    location: "Karachi",
-    employees: [
-      {
-        id: 101,
-        name: "Owais Nadeem",
-        role: "Frontend Developer",
-        skills: ["HTML", "CSS", "JavaScript", "React"],
-        salary: 95000,
-        email: "owais@techverse.com",
-      },
-      {
-        id: 102,
-        name: "Ayesha Khan",
-        role: "UI/UX Designer",
-        skills: ["Figma", "Adobe XD", "Photoshop"],
-        salary: 85000,
-        email: "ayesha@techverse.com",
-      },
-    ],
-  },
-  {
-    id: 2,
-    name: "DataNinjas",
-    location: "Lahore",
-    employees: [
-      {
-        id: 201,
-        name: "Ali Raza",
-        role: "Backend Developer",
-        skills: ["Node.js", "Express", "MongoDB", "REST API"],
-        salary: 110000,
-        email: "ali@dataninjas.com",
-      },
-      {
-        id: 202,
-        name: "Sara Ahmed",
-        role: "Data Analyst",
-        skills: ["Python", "Pandas", "NumPy", "Matplotlib"],
-        salary: 105000,
-        email: "sara@dataninjas.com",
-      },
-    ],
-  },
-  {
-    id: 3,
-    name: "AIVision",
-    location: "Islamabad",
-    employees: [
-      {
-        id: 301,
-        name: "Hassan Javed",
-        role: "Machine Learning Engineer",
-        skills: ["Python", "TensorFlow", "Scikit-learn"],
-        salary: 130000,
-        email: "hassan@aivision.com",
-      },
-    ],
-  },
-];
+// const companies = [
+//   {
+//     id: 1,
+//     name: "TechVerse",
+//     location: "Karachi",
+//     employees: [
+//       {
+//         id: 101,
+//         name: "Owais Nadeem",
+//         role: "Frontend Developer",
+//         skills: ["HTML", "CSS", "JavaScript", "React"],
+//         salary: 95000,
+//         email: "owais@techverse.com",
+//       },
+//       {
+//         id: 102,
+//         name: "Ayesha Khan",
+//         role: "UI/UX Designer",
+//         skills: ["Figma", "Adobe XD", "Photoshop"],
+//         salary: 85000,
+//         email: "ayesha@techverse.com",
+//       },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: "DataNinjas",
+//     location: "Lahore",
+//     employees: [
+//       {
+//         id: 201,
+//         name: "Ali Raza",
+//         role: "Backend Developer",
+//         skills: ["Node.js", "Express", "MongoDB", "REST API"],
+//         salary: 110000,
+//         email: "ali@dataninjas.com",
+//       },
+//       {
+//         id: 202,
+//         name: "Sara Ahmed",
+//         role: "Data Analyst",
+//         skills: ["Python", "Pandas", "NumPy", "Matplotlib"],
+//         salary: 105000,
+//         email: "sara@dataninjas.com",
+//       },
+//     ],
+//   },
+//   {
+//     id: 3,
+//     name: "AIVision",
+//     location: "Islamabad",
+//     employees: [
+//       {
+//         id: 301,
+//         name: "Hassan Javed",
+//         role: "Machine Learning Engineer",
+//         skills: ["Python", "TensorFlow", "Scikit-learn"],
+//         salary: 130000,
+//         email: "hassan@aivision.com",
+//       },
+//     ],
+//   },
+// ];
 
 // 🧠 INTERVIEW-STYLE QUESTIONS (Array + String Methods)
 
@@ -133,6 +133,84 @@ const companies = [
 
 // console.log(getPythonEmployees(companies))
 
-const data = [2 ,  4, 2 , 3, 1 , 5 , 34]
+const users = [
+  {
+    id: 1,
+    name: "Owais Nadeem",
+    age: 23,
+    address: {
+      city: "Karachi",
+      country: "Pakistan",
+    },
+    skills: [
+      { name: "HTML", level: "Advanced" },
+      { name: "CSS", level: "Advanced" },
+      { name: "JavaScript", level: "Intermediate" },
+    ],
+    projects: [
+      { title: "Portfolio Website", tech: ["React", "Tailwind"] },
+      { title: "Quiz App", tech: ["JavaScript", "Firebase"] },
+    ],
+  },
+  {
+    id: 2,
+    name: "Ayesha Khan",
+    age: 25,
+    address: {
+      city: "Lahore",
+      country: "Pakistan",
+    },
+    skills: [
+      { name: "Figma", level: "Expert" },
+      { name: "Adobe XD", level: "Intermediate" },
+    ],
+    projects: [
+      { title: "UI Design System", tech: ["Figma"] },
+      { title: "E-commerce Redesign", tech: ["Figma", "Photoshop"] },
+    ],
+  },
+  {
+    id: 3,
+    name: "Ali Raza",
+    age: 27,
+    address: {
+      city: "Islamabad",
+      country: "Pakistan",
+    },
+    skills: [
+      { name: "Node.js", level: "Advanced" },
+      { name: "MongoDB", level: "Intermediate" },
+    ],
+    projects: [
+      { title: "API Development", tech: ["Express", "MongoDB"] },
+      { title: "Backend Integration", tech: ["Node.js", "REST API"] },
+    ],
+  },
+];
 
-console.log(data.some(item => item > 1 ) )
+// 🧠 LEVEL 1 — String Manipulation Basics
+
+// (i) Convert all user names to uppercase and return the entire array after it with changed effects of name 
+
+// const ConvertUpperCase = (array , key) => array.map((item) => 
+// ({
+//   ...item , 
+//   [key] : item[key].toUpperCase()
+// })
+// )
+
+// console.log(ConvertUpperCase(users , "name"))
+
+// (ii) Get the initials of all users. (e.g. "Owais Nadeem" → "O.N.")
+
+const getInitialsOfUsers = () => {
+
+}
+
+console.log(getInitialsOfUsers(users))
+
+// ------------------------------------------------------------------------- 
+
+// Use of find method of array in JavaScript  
+
+// console.log(users.map((item) => item?.skills.find((item) => item.level.toLowerCase() == "intermediate") ))
