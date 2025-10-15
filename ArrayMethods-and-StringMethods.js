@@ -127,3 +127,12 @@ const companies = [
 
 // (v) Find all employees who have “Python” in their skills.
 
+// const getPythonEmployees = (companyArray) => {
+//   return companyArray.flatMap((item) => item?.employees?.filter(item => item?.skills.some( item => item.toLowerCase() == "python" ))).map(item => item.name )
+// }
+
+// console.log(getPythonEmployees(companies))
+
+const data = [2 ,  4, 2 , 3, 1 , 5 , 34]
+
+console.log(data.some(item => item > 1 ) )
