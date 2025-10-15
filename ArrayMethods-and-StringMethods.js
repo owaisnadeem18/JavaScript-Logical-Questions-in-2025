@@ -222,3 +222,30 @@ const users = [
 // Use of find method of array in JavaScript  
 
 // console.log(users.map((item) => item?.skills.find((item) => item.level.toLowerCase() == "intermediate") ))
+
+// New Data to practice includes method of array 
+
+const newUsers = [
+  { name: "Owais", skills: ["HTML", "CSS", "JavaScript", "React"] },
+  { name: "Ayesha", skills: ["Figma", "UI/UX", "Photoshop"] },
+  { name: "Ali", skills: ["JavaScript", "Node.js", "MongoDB"] },
+  { name: "Sara", skills: ["React", "JavaScript", "Tailwind"] },
+];
+
+// You need to check if each user’s skills array:
+
+// - contains "JavaScript". 
+// - and contains "React". 
+// - If both are true → keep that user.
+
+const checkJsAndReactJS = (array) => {
+  return array.filter(user => {
+    // convert all skills to lowercase once
+    const lowerSkills = user.skills.map(skill => skill.toLowerCase());
+    
+    // check if both exist
+    return lowerSkills.includes("javascript") && lowerSkills.includes("react");
+  });
+};
+
+console.log(checkJsAndReactJS(newUsers));
