@@ -97,20 +97,33 @@ const companies = [
 
 // (ii) - Get all employee names from all companies (single flat array).
 
-const getAllEmployee = (companyArray) => {
-  return companyArray.flatMap((item) => item?.employees.map(employee => employee?.name))
-}
+// const getAllEmployee = (companyArray) => {
+//   return companyArray.flatMap((item) => item?.employees.map(employee => employee?.name))
+// }
 
-console.log(getAllEmployee(companies))
+// console.log(getAllEmployee(companies))
 
 // (iii) Find all employees who earn more than 1,00,000.
 
-const findHighPaidEmployees = () => {
+// const findHighPaidEmployees = (companyArray) => {
+//   const high_paid_employees_arr = companyArray.flatMap((item) => item?.employees.filter(employee => employee.salary >= 100000 ))
 
-}
+//   const high_paid_employees = high_paid_employees_arr.map(item => item?.name)
 
-console.log(findHighPaidEmployees(companies))
+//   return high_paid_employees
 
-// Get a list of all unique roles across all companies.
+// }
 
-// Find all employees who have “Python” in their skills.
+// console.log(findHighPaidEmployees(companies))
+
+// (iv) Get a list of all unique roles across all companies.
+
+// const getEmployeesRole = (companyArray) => {  
+//   const employeeRoles =   companyArray.flatMap(item => item?.employees.map(item => item.role))
+//   return [... new Set (employeeRoles)] 
+//   }
+
+// console.log(getEmployeesRole(companies))
+
+// (v) Find all employees who have “Python” in their skills.
+
