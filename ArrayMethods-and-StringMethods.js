@@ -203,8 +203,8 @@ const users = [
 
 // (ii) Get the initials of all users. (e.g. "Owais Nadeem" → "O.N.")
 
-const getInitialsOfUsers = () => {
-
+const getInitialsOfUsers = (usersArray) => {
+  return usersArray.map(item => item.name.split(" ").map(word => word[0]).join(".") + "." )
 }
 
 console.log(getInitialsOfUsers(users))
