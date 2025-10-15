@@ -89,15 +89,27 @@ const companies = [
 
 // (i) - Get an array of all company names.
 
-const getAllCompanyNames = (companyArray) => {
-    return companyArray.map((item) => item?.name )
-}
+// const getAllCompanyNames = (companyArray) => {
+//     return companyArray.map((item) => item?.name )
+// }
 
-console.log(getAllCompanyNames(companies))
+// console.log(getAllCompanyNames(companies))
 
 // (ii) - Get all employee names from all companies (single flat array).
 
-// Find all employees who earn more than 1,00,000.
+const getAllEmployee = (companyArray) => {
+  return companyArray.flatMap((item) => item?.employees.map(employee => employee?.name))
+}
+
+console.log(getAllEmployee(companies))
+
+// (iii) Find all employees who earn more than 1,00,000.
+
+const findHighPaidEmployees = () => {
+
+}
+
+console.log(findHighPaidEmployees(companies))
 
 // Get a list of all unique roles across all companies.
 
