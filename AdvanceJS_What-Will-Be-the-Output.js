@@ -29,3 +29,65 @@
 // 0 
 // 1 
 // 2 
+
+// 3. Async + await + setTimeout combo
+
+// async function test() {
+//   console.log("1");
+//   setTimeout(() => console.log("2"), 0);
+//   await Promise.resolve();
+//   console.log("3");
+// }
+
+// test();
+// console.log("4");
+
+// Output: 
+// 1 
+// 4 
+// 3 
+// 2 
+
+// ⚙️ Event Loop – Advanced Practice Set #2
+
+// Q.1
+
+// console.log("A");
+
+// setTimeout(() => console.log("B"), 0);
+
+// Promise.resolve().then(() => console.log("C"));
+
+// queueMicrotask(() => console.log("D"));
+
+// console.log("E");
+
+// Output: 
+
+// A 
+// E 
+// C 
+// D 
+// B 
+
+// Q.2
+
+// async function one() {
+//   console.log(1);
+//   await two();
+//   console.log(2);
+// }
+
+// async function two() {
+//   console.log(3);
+// }
+
+// one();
+// console.log(4);
+
+// Output: 
+
+// 1 
+// 3 
+// 2 
+// 4 
