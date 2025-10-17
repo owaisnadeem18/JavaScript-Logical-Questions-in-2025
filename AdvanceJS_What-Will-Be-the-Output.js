@@ -91,3 +91,23 @@
 // 3 
 // 2 
 // 4 
+
+// Q.3 
+
+async function foo() {
+  console.log("start");
+  setTimeout(() => console.log("timeout"), 0);
+  await Promise.reject("error").catch(() => console.log("caught"));
+  console.log("end");
+}
+
+foo();
+console.log("after");
+
+// Output:
+
+// start
+// after
+// caught
+// end
+// timeout
