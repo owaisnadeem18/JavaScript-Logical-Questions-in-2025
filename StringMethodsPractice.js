@@ -5,8 +5,7 @@
 
 const sententece = "JavaScript is powerful"
 
-const ReverseEachWord = (sent) => { 
-    return sent.split(" ").map(item => item.split("").reverse("").join(""))
-}
+const ReverseEachWord = (sent) => sent.split(" ").map(item => item.split("").reverse("").join("")).join(" ")
+
 
 console.log(ReverseEachWord(sententece))
