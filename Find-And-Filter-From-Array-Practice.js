@@ -73,7 +73,19 @@ const orders = [
 // 🧩 Question # 03
 // Find orders where total bill (sum of all price * qty) exceeds $1000.
 
-const findHighPaidOrders = (ordersArray) => ordersArray.filter(order => order )
+const findHighPaidOrders = (ordersArray) => 
+    {
+    return ordersArray.filter(order =>
+        
+        {
+               // Step 1: calculate total of all items
+    const total = order?.items?.reduce((sum, item) => sum + (item.price * item.qty), 0); 
+
+    // Step 2: check if total exceeds 1000
+    return total > 1000;
+
+        })
+    }
 
 console.log(findHighPaidOrders(orders))
 
