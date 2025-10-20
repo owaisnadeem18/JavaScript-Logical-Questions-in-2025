@@ -94,15 +94,15 @@
 
 // Q.3 
 
-async function foo() {
-  console.log("start");
-  setTimeout(() => console.log("timeout"), 0);
-  await Promise.reject("error").catch(() => console.log("caught"));
-  console.log("end");
-}
+// async function foo() {
+//   console.log("start");
+//   setTimeout(() => console.log("timeout"), 0);
+//   await Promise.reject("error").catch(() => console.log("caught"));
+//   console.log("end");
+// }
 
-foo();
-console.log("after");
+// foo();
+// console.log("after");
 
 // Output:
 
@@ -111,3 +111,19 @@ console.log("after");
 // caught
 // end
 // timeout
+
+// Q.4 
+
+// console.log("A");
+
+// setTimeout(() => console.log("B"), 0);
+
+// Promise.resolve().then(() => console.log("C"));
+
+// console.log("D");
+
+// Output: 
+// A
+// D
+// C
+// B
