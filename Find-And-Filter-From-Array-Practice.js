@@ -73,25 +73,34 @@ const orders = [
 // 🧩 Question # 03
 // Find orders where total bill (sum of all price * qty) exceeds $1000.
 
-const findHighPaidOrders = (ordersArray) => 
-    {
-    return ordersArray.filter(order =>
+// const findHighPaidOrders = (ordersArray) => 
+//     {
+//     return ordersArray.filter(order =>
         
-        {
-               // Step 1: calculate total of all items
-    const total = order?.items?.reduce((sum, item) => sum + (item.price * item.qty), 0); 
+//         {
+//                // Step 1: calculate total of all items
+//     const total = order?.items?.reduce((sum, item) => sum + (item.price * item.qty), 0); 
 
-    // Step 2: check if total exceeds 1000
-    return total > 1000;
+//     // Step 2: check if total exceeds 1000
+//     return total > 1000;
 
-        })
-    }
+//         })
+//     }
 
-console.log(findHighPaidOrders(orders))
+// console.log(findHighPaidOrders(orders))
 
+// 🧩 Question # 04
 // Get all orders where the customer lives in “Karachi” AND payment method is “Credit Card”.
 
+// const getCreditAndKarachiOrders = (ordersArray) => ordersArray.filter(order => order?.customer?.city.toLowerCase() == "karachi" && order?.paymentMethod.toLowerCase() == "credit card" )
+
+// console.log(getCreditAndKarachiOrders(orders))
+
+// 🧩 Question # 05
 // Find the first order where at least one item has quantity greater than 2.
+const findOrderWithQuantityGreatorThan2 = (ordersArray) => ordersArray.find(order => order?.items?.some(item => item.qty > 2) )
+
+console.log(findOrderWithQuantityGreatorThan2(orders))
 
 // Get all customers (names only) who ordered at least one item from category “Fashion”.
 
