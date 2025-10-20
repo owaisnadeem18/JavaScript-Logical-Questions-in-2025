@@ -48,7 +48,7 @@ const orders = [
     items: [
       { name: "Book", category: "Stationery", price: 15, qty: 5 },
       { name: "Pen", category: "Stationery", price: 5, qty: 10 },
-      { name: "Pen", category: "electronics", price: 53, qty: 42 },
+      { name: "trousers", category: "fashion", price: 23, qty: 2 },
     ],
     status: "Delivered",
     paymentMethod: "PayPal",
@@ -98,13 +98,28 @@ const orders = [
 
 // 🧩 Question # 05
 // Find the first order where at least one item has quantity greater than 2.
-const findOrderWithQuantityGreatorThan2 = (ordersArray) => ordersArray.find(order => order?.items?.some(item => item.qty > 2) )
 
-console.log(findOrderWithQuantityGreatorThan2(orders))
+// const findOrderWithQuantityGreatorThan2 = (ordersArray) => ordersArray.find(order => order?.items?.some(item => item.qty > 2) )
 
+// console.log(findOrderWithQuantityGreatorThan2(orders))
+
+// 🧩 Question # 06
 // Get all customers (names only) who ordered at least one item from category “Fashion”.
 
+// const getFashionCategoryOrder = (ordersArray) => {
+//     return ordersArray.filter(order => order?.items?.some(item => item.category.toLowerCase() == "fashion")).map(item => item?.customer?.name)
+// } 
+
+// console.log(getFashionCategoryOrder(orders))
+
+// 🧩 Question # 07
 // Find all orders that were NOT delivered and belong to non-VIP customers.
+
+// const NonDeliveredOrders = (ordersArray) => {
+//     return ordersArray?.filter(order => order )
+// }
+
+// console.log(NonDeliveredOrders(orders))
 
 // Get an array of all unique product categories ordered by VIP customers.
 
