@@ -127,3 +127,36 @@
 // D
 // C
 // B
+
+// Q.5 
+
+// async function test() {
+//   console.log("1");
+//   await console.log("2");
+//   console.log("3");
+// }
+
+// test();
+// console.log("4");
+
+// Explanation : 
+
+// await stops the code and in the backend event loop will run the console.log(4) before running console.log(3)
+
+// Q.6 
+
+Promise.resolve()
+  .then(() => {
+    console.log("1");
+    return Promise.resolve("2");
+  })
+  .then((res) => console.log(res));
+
+console.log("3");
+
+// Output: 
+// 3
+// 1
+// 2
+// 2
+// 3
