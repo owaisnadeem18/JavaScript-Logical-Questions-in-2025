@@ -62,6 +62,21 @@
 // 🧠 What is the output?
 // (Hint: Think hoisting.)
 
-// Output: 
+// Output:
+
 // undefined 
 // 5 
+
+// 🧩 Question # 05 
+
+// let a = 10;
+
+// {
+//   console.log(a);
+//   let a = 20;
+// }
+
+// 🧠 What will happen here — output or error? Why?
+
+// Output: 
+// "Error can not use variable 'a' before initialization" (because variable 'a' has data type 'let' which is of block scope)
