@@ -121,8 +121,20 @@ const orders = [
 
 // console.log(NonDeliveredOrders(orders))
 
+// 🧩 Question # 08
 // Get an array of all unique product categories ordered by VIP customers.
 
+const getVIPCustomersProducts = (ordersArray) => {
+    const ordersitems = ordersArray.filter(order => order?.customer?.vip).flatMap((order) => order?.items.map(item => item?.category ))
+    uniqueOrderItems = [...new Set(ordersitems)]
+    return uniqueOrderItems
+  } 
+
+
+console.log(getVIPCustomersProducts(orders))
+
 // Find all orders that include both “Electronics” and “Accessories” categories together.
+
+
 
 // Get all orders where at least one item’s price is less than 20 AND another item’s price is above 500 (in the same order).
