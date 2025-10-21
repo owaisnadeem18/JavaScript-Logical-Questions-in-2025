@@ -158,9 +158,47 @@
 
 // 🧩 Question 4 — Temporal Dead Zone (TDZ)
 
-{
-  console.log(a); // ?
-  let a = 10;
-}
+// {
+//   console.log(a); // ?
+//   let a = 10;
+// }
 
+// Output: 
 // can not access 'a' before initialization => Refrence Error
+
+// 🧩 Question 5 — Redeclaration
+
+// var a = 1;
+// var a = 2;
+
+
+// let b = 3;
+// let b = 4;
+
+// Will throw an error , because the blocked scope variable can not be redeclared
+
+// ------------------------------------------------------------------------------------------ 
+
+// 🧩 1. Function Hoisting
+// ❓Question:
+
+// greet();
+
+// function greet() {
+//   console.log("Hello World!");
+// }
+
+// Output: 
+// Hello World 
+
+// 🧩 2. Function Expression Hoisting
+// ❓Question:
+
+// sayHi();
+
+// var sayHi = function () {
+//   console.log("Hi!");
+// };
+
+// Output: 
+// Type Error (is not a function)
