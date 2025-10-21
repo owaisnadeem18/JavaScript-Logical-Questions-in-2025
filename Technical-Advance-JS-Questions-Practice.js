@@ -48,3 +48,20 @@
 // caught
 // then after catch
 // timeout
+
+// 🧩 Question # 04
+
+// function foo() {
+//   console.log(a);
+//   var a = 5;
+//   console.log(a);
+// }
+
+// foo();
+
+// 🧠 What is the output?
+// (Hint: Think hoisting.)
+
+// Output: 
+// undefined 
+// 5 
