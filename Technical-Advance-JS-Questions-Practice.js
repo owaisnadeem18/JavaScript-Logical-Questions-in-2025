@@ -1,0 +1,50 @@
+// Here’s our first advanced batch (Level 1 – Async & Execution Order) 👇 
+
+// 🧩 Question # 01
+
+// console.log("A");
+
+// setTimeout(() => console.log("B"), 0);
+
+// Promise.resolve().then(() => console.log("C"));
+
+// console.log("D");
+
+// Output: 
+// A 
+// D 
+// C 
+// B 
+
+// 🧩 Question # 02
+
+// async function test() {
+//   console.log("1");
+//   await Promise.resolve();
+//   console.log("2");
+// }
+// test();
+// console.log("3");
+
+// Output: 
+// 1 
+// 3 
+// 2 
+
+// 🧩 Question #3
+// console.log("start");
+
+// setTimeout(() => console.log("timeout"), 0);
+
+// Promise.reject("error")
+//   .catch(() => console.log("caught"))
+//   .then(() => console.log("then after catch"));
+
+// console.log("end");
+
+// Output: 
+// start
+// end
+// caught
+// then after catch
+// timeout
