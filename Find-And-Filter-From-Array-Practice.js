@@ -6,8 +6,8 @@ const orders = [
     orderId: 101,
     customer: { name: "Ali", city: "Karachi", vip: true },
     items: [
-      { name: "Laptop", category: "Electronics", price: 1200, qty: 1 },
-      { name: "Mouse", category: "Electronics", price: 40, qty: 2 },
+      { name: "Laptop", category: "Electronics", price: 10, qty: 1 },
+      { name: "Mouse", category: "Electronics", price: 540, qty: 2 },
     ],
     status: "Delivered",
     paymentMethod: "Credit Card",
@@ -133,16 +133,29 @@ const orders = [
 
 // console.log(getVIPCustomersProducts(orders))
 
+// 🧩 Question # 09
 // Find all orders that include both “Electronics” and “Accessories” categories together.
 
-const FindOrdersIncludeCategories = (ordersArray) => {
-  return ordersArray.filter(order => {
-   let categories = order?.items.map(item => item?.category.toLowerCase())
-    categories = categories.includes("electronics") && categories.includes("accessories")
-    return categories
-  }
-  )}
+// const FindOrdersIncludeCategories = (ordersArray) => {
+//   return ordersArray.filter(order => {
+//    let categories = order?.items.map(item => item?.category.toLowerCase())
+//     categories = categories.includes("electronics") && categories.includes("accessories")
+//     return categories
+//   }
+//   )}
 
-console.log(FindOrdersIncludeCategories(orders))
+// console.log(FindOrdersIncludeCategories(orders))
 
+// 🧩 Question # 10
 // Get all orders where at least one item’s price is less than 20 AND another item’s price is above 500 (in the same order).
+
+const getUniqueTypeOrders = (ordersArray) => {
+  return ordersArray.filter((order) => {
+    const itemsArr = order?.items?.map( item => item?.price)
+    let hasLowPriceItem = itemsArr.some(item => item < 20 )
+    let hasHighPriceItem = itemsArr.some(item => item > 500)
+    return hasHighPriceItem && hasLowPriceItem
+  })
+}
+
+console.log(getUniqueTypeOrders(orders))
