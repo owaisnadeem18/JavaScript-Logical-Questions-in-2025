@@ -80,3 +80,87 @@
 
 // Output: 
 // "Error can not use variable 'a' before initialization" (because variable 'a' has data type 'let' which is of block scope)
+
+// ---------------------------------------------------------------------------- 
+
+// Difference between let , var & const
+
+// 1. Scope:
+
+// var: Available throughout the entire function where it’s declared. Ignores block {} boundaries.
+// let:	(Block-scoped) => Accessible only within the block {} it’s declared in.
+// const (Block-scoped) => Same as let, but value cannot be reassigned.
+
+// 2. Hoisting: 
+
+// All three (var, let, const) are hoisted — but initialized differently.
+
+// Keyword	Hoisted?	Initialized?	Result
+// var	✅ Yes	✅ Initialized with undefined	Accessible before declaration (undefined).
+// let	✅ Yes	❌ Not initialized	Accessing before declaration → ❌ Temporal Dead Zone (TDZ)
+// const	✅ Yes	❌ Not initialized	Same TDZ behavior as let.
+
+// Reassignment: 
+
+// var: Reassignment ->(Yes) Yes -> Redeclaration (Yes)
+// let: Reassignment ->(Yes) & Redeclaration ->(No)
+// const: Reassignment ->(No) & Redeclaration ->(No) -------------> Even Redeclaration is also not allowed. 
+
+// -------------------------------------------------------------------------------------- 
+
+// ⚡ JavaScript Scope & Hoisting Questions (Interview Practice) 
+
+// 🧩 Question 1 — Basic Block Scope 
+
+// if (true) {
+//   var x = 10;
+//   let y = 20;
+//   const z = 30;
+// }
+
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+// Output: 
+// 10 
+// can not access 'y' before initialization => Refrence Error 
+// can not access 'z' before initialization => Refrence Error
+
+// 🧩 Question 2 — Function vs Block Scope
+
+// function test() {
+//   if (true) {
+//     let a = 1;
+//     var b = 2;
+//   }
+//   console.log(a);
+//   console.log(b);
+// }
+
+// test();
+
+// Output: 
+// can not access 'a' before initialization => Refrence Error
+// 2
+
+// 🧩 Question 3 — Hoisting Behavior
+
+// console.log(x);
+// console.log(y);
+
+// var x = 5;
+// let y = 10;
+
+// Output: 
+// undefined
+// can not access 'y' before initialization => Refrence Error
+
+// 🧩 Question 4 — Temporal Dead Zone (TDZ)
+
+{
+  console.log(a); // ?
+  let a = 10;
+}
+
+// can not access 'a' before initialization => Refrence Error
