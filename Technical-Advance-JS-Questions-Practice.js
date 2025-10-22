@@ -307,3 +307,26 @@
 // for (let i = 0; i < 3; i++) {
 //    console.log(i);
 // }
+
+// 🧩 2. Closures + var vs let
+
+// for (var i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 100);
+// }
+
+// for (let j = 0; j < 3; j++) {
+//   setTimeout(() => console.log(j), 100);
+// }
+
+// ❓ Why are the two loops different?
+
+// In the case of var , redeclaration and reassignment of the variable is possible , so that's why when there is a timeout of 1 second , then the loop will run and the value of var will get 3 which will print , while in the case of 'let' we will see that let is Block Scoped let creates a new variable for each iteration of the loop (due to block scoping). So each callback "remembers" its own value of j via closure.
+
+// Output: 
+
+// 3
+// 3
+// 3
+// 0
+// 1
+// 2
