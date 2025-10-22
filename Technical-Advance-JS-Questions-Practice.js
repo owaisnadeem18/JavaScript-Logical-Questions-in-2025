@@ -250,3 +250,30 @@
 // Key Rule:
 // (i) Variables declared inside the inner function → reset on every call.
 // (ii) Variables declared inside the outer function → remembered by the closure.
+
+// ⚙️ Closures and Function Scope
+
+// function makeCounter() {
+//   let count = 0;
+//   return function() {
+//     return ++count;
+//   };
+// }
+
+// const counter1 = makeCounter();
+// const counter2 = makeCounter();
+
+// console.log(counter1());
+// console.log(counter1());
+// console.log(counter2());
+
+// Output: 
+// 1
+// 2
+// 1
+
+// Why not 1, 2, 3?
+
+// Because closures are independent.
+// Each time you call makeCounter(), a new environment is created with its own count.
+// So counter1 and counter2 don’t share state — they each remember their own copy.
