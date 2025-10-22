@@ -202,3 +202,51 @@
 
 // Output: 
 // Type Error (is not a function)
+
+// 🧩 3. this inside a Function
+// ❓Question:
+
+// const obj = {
+//   name: "Owais",
+//   getName: function () {
+//     console.log(this.name);
+//   },
+// };
+
+// const fn = obj.getName;
+// fn();
+
+// Output: 
+// undefined
+
+// obj.getName()
+
+// Output: 
+// Owais
+
+// Closures
+// function outer() {
+//   let count = 0;
+//   return function() {
+//     count++; // inner function updates the outer variable
+//     console.log(count); // it prints (1) and it will remember this variable
+//   }
+// }
+
+// const inner = outer();
+// inner(); the count was 1 because the run as outer()
+// inner(); now we passed 1 as count (when the function run it will print 2)
+
+// Ouput: 
+// 1
+// 2 
+
+// Explanation: 
+
+// First call inner() → count becomes 1 → prints 1.
+
+// Second call inner() → the same count variable is incremented → becomes 2 → prints 2.
+
+// Key Rule:
+// (i) Variables declared inside the inner function → reset on every call.
+// (ii) Variables declared inside the outer function → remembered by the closure.
