@@ -277,3 +277,33 @@
 // Because closures are independent.
 // Each time you call makeCounter(), a new environment is created with its own count.
 // So counter1 and counter2 don’t share state — they each remember their own copy.
+
+// – The Tricky Loop + Closure Combo
+
+// for (var i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 1000);
+// }
+
+// Output:
+// 3
+// 3
+// 3
+
+// for (let i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 1000);
+// }
+
+// Output:
+// 0
+// 1
+// 2
+
+// for (const i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 1000);
+// }
+
+// Assignment to constant variable is not possible (will throw an error here)
+
+// for (let i = 0; i < 3; i++) {
+//    console.log(i);
+// }
