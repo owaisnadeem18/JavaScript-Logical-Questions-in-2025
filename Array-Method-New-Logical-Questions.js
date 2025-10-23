@@ -1,4 +1,13 @@
 // Find the maximum and minimum number in an array.
+
+const arr = [4 , 67 , 23 , 24 ,21 ,778 ,24 , 213 ,12]
+
+const findMaxAndMin = (numbersArray , index) => [...numbersArray].sort((a,b) => a-b)[index]
+
+
+console.log(`The maximum number is => ${findMaxAndMin(arr , arr.length - 1)}`)
+console.log(`The minimum number is => ${findMaxAndMin(arr , 0)}`)
+
 // Remove duplicate elements from an array.
 // Find the second largest element in an array.
 // Reverse an array without using .reverse().
