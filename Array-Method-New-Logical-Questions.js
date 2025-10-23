@@ -2,21 +2,30 @@
 
 const arr = [4 , 67 , 23 , 24 ,21 ,778 ,24 , 213 ,12 , 12 ,4 ,67 ,24 , 213]
 
+// -------------1------------- 
 // const findMaxAndMin = (numbersArray , index) => [...numbersArray].sort((a,b) => a-b)[index]
-
 
 // console.log(`The maximum number is => ${findMaxAndMin(arr , arr.length - 1)}`)
 // console.log(`The minimum number is => ${findMaxAndMin(arr , 0)}`)
 
+// -------------2------------- 
 // Remove duplicate elements from an array.
 
-const removeDuplicatesFromArray = (array) => {
-    return [...new Set(array)]
-}
+// const removeDuplicatesFromArray = (array) => {
+//     return [...new Set(array)]
+// }
 
-console.log(removeDuplicatesFromArray(arr))
+// console.log(removeDuplicatesFromArray(arr))
 
+// -------------3------------- 
 // Find the second largest element in an array.
+
+// const findLargetElemInArr = (array) => {
+//     return [...array].sort((a,b) => a-b)[array.length - 2]
+// }
+
+// console.log(findLargetElemInArr(arr))
+
 // Reverse an array without using .reverse().
 // Count how many times each element appears in an array.
 // Merge two arrays and remove duplicates.
