@@ -1,14 +1,21 @@
 // Find the maximum and minimum number in an array.
 
-const arr = [4 , 67 , 23 , 24 ,21 ,778 ,24 , 213 ,12]
+const arr = [4 , 67 , 23 , 24 ,21 ,778 ,24 , 213 ,12 , 12 ,4 ,67 ,24 , 213]
 
-const findMaxAndMin = (numbersArray , index) => [...numbersArray].sort((a,b) => a-b)[index]
+// const findMaxAndMin = (numbersArray , index) => [...numbersArray].sort((a,b) => a-b)[index]
 
 
-console.log(`The maximum number is => ${findMaxAndMin(arr , arr.length - 1)}`)
-console.log(`The minimum number is => ${findMaxAndMin(arr , 0)}`)
+// console.log(`The maximum number is => ${findMaxAndMin(arr , arr.length - 1)}`)
+// console.log(`The minimum number is => ${findMaxAndMin(arr , 0)}`)
 
 // Remove duplicate elements from an array.
+
+const removeDuplicatesFromArray = (array) => {
+    return [...new Set(array)]
+}
+
+console.log(removeDuplicatesFromArray(arr))
+
 // Find the second largest element in an array.
 // Reverse an array without using .reverse().
 // Count how many times each element appears in an array.
