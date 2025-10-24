@@ -21,31 +21,52 @@ const arr = [4 , 67 , 23 , 24 ,21 ,778 ,24 , 213 ,12 , 12 ,4 ,67 ,24 , 213]
 // Find the second largest element in an array.
 
 // const findLargetElemInArr = (array) => {
-//     return [...array].sort((a,b) => a-b)[array.length - 2]
-// }
-
+    //     return [...array].sort((a,b) => a-b)[array.length - 2]
+    // }
+    
 // console.log(findLargetElemInArr(arr))
 
+// -------------4------------- 
 // Reverse an array without using .reverse().
 
-const reverseAnArray = (array) => {
-    let sorted_arr = array.sort((a,b) => a-b)
+// const reverseAnArray = (array) => {
+    //     let sorted_arr = array.sort((a,b) => a-b)
+    
+    //     let arr_removed_duplicates = [...new Set(sorted_arr)]
+    
+    //     let reversed_arr = []
+    
+    //     for (let i = arr_removed_duplicates.length - 1 ; i >= 0 ; i--) {
+            // reversed_arr.push(arr_removed_duplicates[i])
+            // }
 
-    let arr_removed_duplicates = [...new Set(sorted_arr)]
+            //     return reversed_arr
 
-    let reversed_arr = []
+            // }
 
-    for (let i = arr_removed_duplicates.length - 1 ; i >= 0 ; i--) {
-        reversed_arr.push(arr_removed_duplicates[i])
+// console.log(reverseAnArray(arr))
+        
+// -------------5------------- 
+// Count how many times each element appears in an array.
+
+const countOccurences = (numbersArr) => {
+    let numbersObj = {}
+
+    for (let i = 0 ; i<numbersArr.length ; i++) {
+        if (Object.hasOwn(numbersObj, numbersArr[i])) {
+            numbersObj[numbersArr[i]]++
+        }
+        else {
+             numbersObj[numbersArr[i]] = 1
+        }
     }
 
-    return reversed_arr
+    return numbersObj
 
 }
 
-console.log(reverseAnArray(arr))
+console.log(countOccurences(arr))
 
-// Count how many times each element appears in an array.
 // Merge two arrays and remove duplicates.
 // Rotate an array k times to the right.
 // Find the sum of all even numbers in an array.
