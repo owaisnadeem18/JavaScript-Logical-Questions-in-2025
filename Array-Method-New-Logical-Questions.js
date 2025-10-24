@@ -1,6 +1,6 @@
 // Find the maximum and minimum number in an array.
 
-const arr = [4 , 67 , 23 , 24 ,21 ,778 ,24 , 213 ,12 , 12 ,4 ,67 ,24 , 213]
+// const arr = [4 , 67 , 23 , 24 ,21 ,778 ,24 , 213 ,12 , 12 ,4 ,67 ,24 , 213]
 
 // -------------1------------- 
 // const findMaxAndMin = (numbersArray , index) => [...numbersArray].sort((a,b) => a-b)[index]
@@ -70,17 +70,29 @@ const arr = [4 , 67 , 23 , 24 ,21 ,778 ,24 , 213 ,12 , 12 ,4 ,67 ,24 , 213]
 // -------------6------------- 
 // Merge two arrays and remove duplicates.
 
-const arr1 = [2 ,5 ,1 , 3 , 5 ,2 ,2 , 64 ,23 ,12 , 3 , 12]
-const arr2 = [32 ,25 ,41 , 33 , 35 ,12 ,32 , 164 ,23 ,12 , 164 , 25]
+// const arr1 = [2 ,5 ,1 , 3 , 5 ,2 ,2 , 64 ,23 ,12 , 3 , 12]
+// const arr2 = [32 ,25 ,41 , 33 , 35 ,12 ,32 , 164 ,23 ,12 , 164 , 25]
 
-const mergeArrayAndRemoveDuplicates = (array1 , array2) => {
-    const merged_arr = [...array1 , ...array2]
-    return [... new Set(merged_arr)] 
+// const mergeArrayAndRemoveDuplicates = (array1 , array2) => {
+//     const merged_arr = [...array1 , ...array2]
+//     return [... new Set(merged_arr)] 
+// }
+
+// console.log(mergeArrayAndRemoveDuplicates(arr1 , arr2))
+    
+    
+    
+// -------------7------------- 
+// Find the sum of all even numbers in an array.
+    
+const array = [32 ,25 ,41 , 33 , 35 ,12 ,32 , 164 ,23 ,12 , 164 , 25]
+
+const SumOfAllEvenNumbers = (arr) => {
+    const evenNumsArray = arr.filter(num => num % 2 == 0)
+    return evenNumsArray.reduce((a , b) => a + b , 0 )
 }
 
-console.log(mergeArrayAndRemoveDuplicates(arr1 , arr2))
+console.log(SumOfAllEvenNumbers(array))
 
-// Rotate an array k times to the right.
-// Find the sum of all even numbers in an array.
 // Check if two arrays contain the same elements (regardless of order).
 // Flatten a nested array (e.g., [1,[2,[3]]] → [1,2,3]).
