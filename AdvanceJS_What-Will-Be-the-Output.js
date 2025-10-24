@@ -298,18 +298,18 @@
 // B
 // D
 
-console.log('A');
+// console.log('A');
 
-setTimeout(() => console.log('B'), 0);
+// setTimeout(() => console.log('B'), 0);
 
-// If we have a promose without (await)
+// // If we have a promose without (await)
 
-Promise.resolve().then(() => {
-  console.log('C');
-  setTimeout(() => console.log('D'), 0);
-});
+// Promise.resolve().then(() => {
+//   console.log('C');
+//   setTimeout(() => console.log('D'), 0);
+// });
 
-console.log('E');
+// console.log('E');
 
 // Output: 
 // A 
@@ -317,3 +317,25 @@ console.log('E');
 // C
 // B
 // D
+
+function outer() {
+  let count = 0;
+
+  return function inner() {
+    count++;
+    console.log(count);
+  };
+}
+
+const counter1 = outer();
+counter1();
+counter1();
+
+const counter2 = outer();
+counter2();
+
+
+// Output : 
+// 1 
+// 2
+// 1 
