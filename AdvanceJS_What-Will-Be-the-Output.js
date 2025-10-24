@@ -318,24 +318,42 @@
 // B
 // D
 
-function outer() {
-  let count = 0;
+// function outer() {
+//   let count = 0;
 
-  return function inner() {
-    count++;
-    console.log(count);
-  };
-}
+//   return function inner() {
+//     count++;
+//     console.log(count);
+//   };
+// }
 
-const counter1 = outer();
-counter1();
-counter1();
+// const counter1 = outer();
+// counter1();
+// counter1();
 
-const counter2 = outer();
-counter2();
+// const counter2 = outer();
+// counter2();
 
 
 // Output : 
 // 1 
 // 2
 // 1 
+
+// Another Question 
+
+let name = "Global";
+
+function outer() {
+  let name = "Outer";
+  function inner() {
+    console.log(name);
+  }
+  return inner;
+}
+
+const fn = outer();
+fn();
+
+// Output: 
+// Outer
