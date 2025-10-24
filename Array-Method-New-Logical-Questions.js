@@ -84,15 +84,37 @@
     
 // -------------7------------- 
 // Find the sum of all even numbers in an array.
-    
-const array = [32 ,25 ,41 , 33 , 35 ,12 ,32 , 164 ,23 ,12 , 164 , 25]
 
-const SumOfAllEvenNumbers = (arr) => {
-    const evenNumsArray = arr.filter(num => num % 2 == 0)
-    return evenNumsArray.reduce((a , b) => a + b , 0 )
-}
+// const array = [32 ,25 ,41 , 33 , 35 ,12 ,32 , 164 ,23 ,12 , 164 , 25]
 
-console.log(SumOfAllEvenNumbers(array))
+// const SumOfAllEvenNumbers = (arr) => {
+//     const evenNumsArray = arr.filter(num => num % 2 == 0)
+//     return evenNumsArray.reduce((a , b) => a + b , 0 )
+// }
+
+// console.log(SumOfAllEvenNumbers(array))
 
 // Check if two arrays contain the same elements (regardless of order).
+
+let arr1 = [1, 2, 3, 5];
+let arr2 = [4, 3, 2, 1];
+
+const CheckTwoArraysSimilarity = (array1 , array2) => {
+    const sorted_arr1 = [...array1].sort((a,b) => a-b)
+    const sorted_arr2 = [...array2].sort((a,b) => a-b )
+
+    if (sorted_arr1.length !== sorted_arr2.length) return false
+
+    for (let i = 0 ; i<sorted_arr1.length ; i++) {
+        if (sorted_arr1[i] !== sorted_arr2[i]) {
+            return false
+        }
+    }
+
+    // return sorted_arr1 == sorted_arr2
+    return true
+}
+
+console.log(CheckTwoArraysSimilarity(arr1 , arr2))
+
 // Flatten a nested array (e.g., [1,[2,[3]]] → [1,2,3]).
