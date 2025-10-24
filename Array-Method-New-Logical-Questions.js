@@ -49,25 +49,37 @@ const arr = [4 , 67 , 23 , 24 ,21 ,778 ,24 , 213 ,12 , 12 ,4 ,67 ,24 , 213]
 // -------------5------------- 
 // Count how many times each element appears in an array.
 
-const countOccurences = (numbersArr) => {
-    let numbersObj = {}
+// const countOccurences = (numbersArr) => {
+//     let numbersObj = {}
 
-    for (let i = 0 ; i<numbersArr.length ; i++) {
-        if (Object.hasOwn(numbersObj, numbersArr[i])) {
-            numbersObj[numbersArr[i]]++
-        }
-        else {
-             numbersObj[numbersArr[i]] = 1
-        }
-    }
+//     for (let i = 0 ; i<numbersArr.length ; i++) {
+//         if (Object.hasOwn(numbersObj, numbersArr[i])) {
+//             numbersObj[numbersArr[i]]++
+//         }
+//         else {
+//              numbersObj[numbersArr[i]] = 1
+//         }
+//     }
 
-    return numbersObj
+//     return numbersObj
 
+// }
+
+// console.log(countOccurences(arr))
+
+// -------------6------------- 
+// Merge two arrays and remove duplicates.
+
+const arr1 = [2 ,5 ,1 , 3 , 5 ,2 ,2 , 64 ,23 ,12 , 3 , 12]
+const arr2 = [32 ,25 ,41 , 33 , 35 ,12 ,32 , 164 ,23 ,12 , 164 , 25]
+
+const mergeArrayAndRemoveDuplicates = (array1 , array2) => {
+    const merged_arr = [...array1 , ...array2]
+    return [... new Set(merged_arr)] 
 }
 
-console.log(countOccurences(arr))
+console.log(mergeArrayAndRemoveDuplicates(arr1 , arr2))
 
-// Merge two arrays and remove duplicates.
 // Rotate an array k times to the right.
 // Find the sum of all even numbers in an array.
 // Check if two arrays contain the same elements (regardless of order).
