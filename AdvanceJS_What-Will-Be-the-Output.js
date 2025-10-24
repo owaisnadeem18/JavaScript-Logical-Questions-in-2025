@@ -342,18 +342,58 @@
 
 // Another Question 
 
-let name = "Global";
+// let name = "Global";
 
-function outer() {
-  let name = "Outer";
-  function inner() {
-    console.log(name);
-  }
-  return inner;
-}
+// function outer() {
+//   let name = "Outer";
+//   function inner() {
+//     console.log(name);
+//   }
+//   return inner;
+// }
 
-const fn = outer();
-fn();
+// const fn = outer();
+// fn();
 
 // Output: 
 // Outer
+
+// Another Question 
+
+// function makeCounter() {
+//   let count = 0;
+//   return function() {
+//     return ++count;
+//   };
+// }
+
+// const c1 = makeCounter();
+// const c2 = makeCounter();
+
+// console.log(c1());
+// console.log(c1());
+// console.log(c2());
+
+// Output: 
+// 1 
+// 2 
+// 1 
+
+// Another Question
+
+// function outer() {
+//   let x = 10;
+
+//   function inner() {
+//     console.log(x);
+//     x++;
+//   }
+
+//   return inner;
+// }
+
+// const fn1 = outer();
+// const fn2 = fn1;
+
+// fn1(); // 10
+// fn2(); // 11
