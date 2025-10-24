@@ -145,14 +145,14 @@
 
 // Q.6 
 
-Promise.resolve()
-  .then(() => {
-    console.log("1");
-    return Promise.resolve("2");
-  })
-  .then((res) => console.log(res));
+// Promise.resolve()
+//   .then(() => {
+//     console.log("1");
+//     return Promise.resolve("2");
+//   })
+//   .then((res) => console.log(res));
 
-console.log("3");
+// console.log("3");
 
 // Output: 
 // 3
@@ -160,3 +160,160 @@ console.log("3");
 // 2
 // 2
 // 3
+
+// ---------------------------------------------------- Advanced Technical & Logical Interview Questions of JavaScript ----------------------------------------------------- 
+
+// 1. 
+
+// function counter() {
+  //   let count = 0;
+  //   return function() {
+    //     return count++; // will do increament , but return the same number i.e count 0 in the initial function call 
+    //   };
+    // }
+    
+    // const c = counter();
+// console.log(c()); // 0
+// console.log(c()); // 1
+// console.log(c()); // 2
+
+// 2. 
+
+// function counter() {
+//   let count = 0;
+//   return function() {
+//     return ++count;
+//   };
+// }
+
+// const c = counter();
+// console.log(c()); // 1
+// console.log(c()); // 2
+// console.log(c()); // 3
+
+// function makeCounters() {
+//   let count = 5;
+
+//   return {
+//     inc: () => count++,
+//     preInc: () => ++count
+//   };
+// }
+
+// const obj = makeCounters();
+
+// console.log(obj.inc());   // 5
+// console.log(obj.preInc()); // 7
+// console.log(obj.inc());   // 7
+// console.log(obj.preInc()); // 9
+
+// 3.
+
+// Pre/Post Mix Inside One Closure
+
+// function tricky() {
+//   let num = 1;
+//   return function() {
+//     return num++ + ++num;
+//   };
+// }
+
+// const t = tricky();
+// console.log(t()); // 4
+// console.log(t()); // 8
+
+// 4.
+
+// function counter() {
+//   let x = 1;
+//   return function inner() {
+//     return function deeper() {
+//       return x++ + ++x + x++;
+      
+//       // --------- first iteration ---------
+//       // 1 + 3 + 3
+//       // => result => 7 
+      
+//       // --------- second iteration ---------
+//       // 4 + 6 + 6 
+//       // => result => 16 
+      
+//     };
+//   };
+// }
+
+// const c = counter();
+// const d = c();
+// console.log(d()); // 7
+// console.log(d()); // 16
+
+// 5. 
+
+// {
+//   console.log(foo);
+//   function foo() { return 1; }
+// }
+
+// console.log(foo());
+
+// Output:
+// [Function: foo]
+// 1
+
+// Async/Await Order Puzzle
+
+// async function run() {
+//   console.log('1');
+//   await Promise.resolve(console.log('2'));
+//   console.log('3');
+// }
+
+// run();
+
+// console.log('4');
+
+// Output:
+// 1
+// 2
+// 4
+// 3
+
+// --------------------------------------------- Async Chain Mix ---------------------------------------------
+
+// console.log('A');
+
+// setTimeout(() => console.log('B'), 0);
+
+// await Promise.resolve().then(() => {
+//   console.log('C');
+//   setTimeout(() => console.log('D'), 0);
+// });
+
+// console.log('E');
+
+// Output: 
+// A 
+// C
+// E
+// B
+// D
+
+console.log('A');
+
+setTimeout(() => console.log('B'), 0);
+
+// If we have a promose without (await)
+
+Promise.resolve().then(() => {
+  console.log('C');
+  setTimeout(() => console.log('D'), 0);
+});
+
+console.log('E');
+
+// Output: 
+// A 
+// E
+// C
+// B
+// D
