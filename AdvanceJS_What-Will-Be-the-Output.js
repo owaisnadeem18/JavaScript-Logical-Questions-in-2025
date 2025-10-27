@@ -443,23 +443,48 @@
 // 0 
 // 1
 
-let count = 0;
+// let count = 0;
 
-function foo() {
-  let count = 34
-  console.log(count);
-  count++;
-}
+// function foo() {
+//   let count = 34
+//   console.log(count);
+//   count++;
+// }
 
-function bar() {
-  let count = 10;
-  foo();
-}
+// function bar() {
+//   let count = 10;
+//   foo();
+// }
 
-bar();
-bar();
+// bar();
+// bar();
 
 // Output: 
 
 // 34
-// 35
+// 34
+
+// — Hoisting & TDZ 
+
+// console.log(a);
+// let a = 5;
+
+// 💡 Concept: Temporal Dead Zone (TDZ) with let / const.
+
+// Reference Error:
+// A ReferenceError occurs because variables declared with let and const are hoisted but remain uninitialized in memory until their declaration line is executed.
+
+// Temporaral Dead Zone: 
+// 🧠 What Is TDZ (Temporal Dead Zone)?
+
+// The Temporal Dead Zone (TDZ) is the period of time between:
+
+// (i) when a variable is hoisted (declared in memory), and
+
+// (ii) when it is actually initialized (assigned a value in code).
+
+// During this time, if you try to access the variable → 🚨 ReferenceError occurs.
+
+
+
+// 
