@@ -397,3 +397,24 @@
 
 // fn1(); // 10
 // fn2(); // 11
+
+// -------------------------------------- 
+
+// — Independent Closures
+
+function createCounter() {
+  let count = 0;
+
+  return function() {
+    count++;
+    console.log(count);
+  };
+}
+
+const x = createCounter();
+const y = createCounter();
+
+x(); // 1
+y(); // 1
+x(); // 2
+y(); // 2
