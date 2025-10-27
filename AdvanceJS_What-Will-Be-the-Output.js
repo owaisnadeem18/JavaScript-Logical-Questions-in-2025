@@ -474,7 +474,7 @@
 // Reference Error:
 // A ReferenceError occurs because variables declared with let and const are hoisted but remain uninitialized in memory until their declaration line is executed.
 
-// Temporaral Dead Zone: 
+// — Temporaral Dead Zone: 
 // 🧠 What Is TDZ (Temporal Dead Zone)?
 
 // The Temporal Dead Zone (TDZ) is the period of time between:
@@ -485,6 +485,39 @@
 
 // During this time, if you try to access the variable → 🚨 ReferenceError occurs.
 
+// — IIFE + Closure
+// const counter = (function() {
+//   let num = 0;
+
+//   return function() {
+//     console.log(++num);
+//   };
+// })();
+
+// counter();
+// counter();
+
+// Output:
+// 1
+// 2
+
+// 💡 Concept: IIFE creates a private variable (num), preserved by closure.
 
 
-// 
+// ⚙️ — Closure & Function Reference
+
+function makeAdder(x) {
+  return function(y) {
+    return x + y;
+  };
+}
+
+const add5 = makeAdder(5);
+const add10 = makeAdder(10);
+
+console.log(add5(2));  
+console.log(add10(2));
+
+// Output: 
+// 7 
+// 12
