@@ -402,19 +402,64 @@
 
 // — Independent Closures
 
-function createCounter() {
-  let count = 0;
+// function createCounter() {
+//   let count = 0;
 
-  return function() {
-    count++;
-    console.log(count);
-  };
+//   return function() {
+//     count++;
+//     console.log(count);
+//   };
+// }
+
+// const x = createCounter();
+// const y = createCounter();
+
+// x(); // 1
+// y(); // 1
+// x(); // 2
+// y(); // 2
+
+// --------------------------------------- 
+
+// — Function Reassignment
+
+// let count = 0;
+
+// function foo() {
+//   console.log(count);
+//   count++;
+// }
+
+// function bar() {
+//   let count = 10;
+//   foo();
+// }
+
+// bar();
+// bar();
+
+// Output: 
+
+// 0 
+// 1
+
+let count = 0;
+
+function foo() {
+  let count = 34
+  console.log(count);
+  count++;
 }
 
-const x = createCounter();
-const y = createCounter();
+function bar() {
+  let count = 10;
+  foo();
+}
 
-x(); // 1
-y(); // 1
-x(); // 2
-y(); // 2
+bar();
+bar();
+
+// Output: 
+
+// 34
+// 35
