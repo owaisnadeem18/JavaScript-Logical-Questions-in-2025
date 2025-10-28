@@ -1,4 +1,4 @@
-    // finding the factorial of any number with the help of resursion
+    // finding the factorial of any number with the help of recursion
 
     const num = 5
 
