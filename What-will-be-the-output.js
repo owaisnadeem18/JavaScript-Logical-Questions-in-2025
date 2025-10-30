@@ -62,13 +62,39 @@
 
 // 🧩 Shadowing (Tricky One 😎)
 
-let count = 10;
-{
-  let count = 20;
-  console.log(count); // 20
-}
-console.log(count); // 10
+// let count = 10;
+// {
+//   let count = 20;
+//   console.log(count); // 20
+// }
+// console.log(count); // 10
 
 // Output: 
 // 20 
 // 10 
+
+// 🧩 Illegal Shadowing (Advanced)
+
+// let a = 10;
+
+// {
+//   var a = 20; // SyntaxError: Identifier 'a' has already been declared
+// }
+
+// 🧩 Function Declaration vs let Variable
+
+// greet(); // Hello
+// function greet() {
+//   console.log("Hello");
+// }
+
+// sayHi(); // TypeError: sayHi is not a function (if we init) 
+// var sayHi = function() {
+//   console.log("Hi");
+// };
+
+// sayHi(); // ReferenceError: Cannot access 'sayHi' before initialization . 
+// let sayHi = function() {
+//   console.log("Hi");
+// };
+
