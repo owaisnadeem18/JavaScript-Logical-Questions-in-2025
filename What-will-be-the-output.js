@@ -42,12 +42,33 @@
 
 // Hoisting of variables declared with var, let, and const:
 
-var a = 33
-console.log(a)
+// var a = 33
+// console.log(a)
 
 // Output: 
 // undefined (Because only variable hoisted not the value of the variable)
 
 
-console.log(b)
-let b = 45
+// console.log(b)
+// let b = 45
+
+// if (true) {
+//   var x = 5;
+//   let y = 10;
+// }
+
+// console.log(x); // 5
+// console.log(y); // Not Defined
+
+// 🧩 Shadowing (Tricky One 😎)
+
+let count = 10;
+{
+  let count = 20;
+  console.log(count); // 20
+}
+console.log(count); // 10
+
+// Output: 
+// 20 
+// 10 
