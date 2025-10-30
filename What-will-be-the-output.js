@@ -37,5 +37,17 @@
 
 // ----------------------------------------------------------------------------------- 
 
-console.log(typeof NaN);
-console.log(NaN === NaN);
+// console.log(typeof NaN); // Number
+// console.log(NaN === NaN); // false
+
+// Hoisting of variables declared with var, let, and const:
+
+var a = 33
+console.log(a)
+
+// Output: 
+// undefined (Because only variable hoisted not the value of the variable)
+
+
+console.log(b)
+let b = 45
