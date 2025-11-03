@@ -84,4 +84,4 @@
 // console.log("A" - "B" + "2"); NaN2
 // console.log("A" - "B" + 2); NaN
 
-console.log(NaN + 23)
+console.log(NaN + 23) // If you add a string with NaN , then it will concatenate it , but if you add a number with NaN , then result would be just NaN 
