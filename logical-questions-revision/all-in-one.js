@@ -43,3 +43,45 @@
 
 // console.log(findTwoNumbers(arr , target)) 
 
+// ⚡ Logical Scope Chain
+
+// let a = 10;
+// function outer() {
+//   let a = 20;
+//   function inner() {
+//     console.log(a);  
+//   }
+//   return inner;
+// }
+
+// const fn = outer();
+
+// fn();
+
+// Output: 
+// 20
+
+// 🧠 Level 1 – Basic Logic
+
+// Output-based:
+
+// let a = 10;
+// let b = a;
+// b = 20;
+// console.log(a, b);
+
+
+// ❓ What will be logged, and why?
+
+// 10 20 
+
+// ------------------------------------ 
+
+// Type coercion trick:
+
+// console.log(1 + "2" + "2"); 12222
+// console.log(1 + +"2" + "2"); 32
+// console.log("A" - "B" + "2"); NaN2
+// console.log("A" - "B" + 2); NaN
+
+console.log(NaN + 23)
