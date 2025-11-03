@@ -84,4 +84,35 @@
 // console.log("A" - "B" + "2"); NaN2
 // console.log("A" - "B" + 2); NaN
 
-console.log(NaN + 23) // If you add a string with NaN , then it will concatenate it , but if you add a number with NaN , then result would be just NaN 
+// console.log(NaN + 23) // If you add a string with NaN , then it will concatenate it , but if you add a number with NaN , then result would be just NaN 
+
+// Scope and closures:
+
+// function makeCounter() {
+//   let count = 0;
+//   return function() {
+//     return ++count;
+//   }
+// }
+
+// const counter1 = makeCounter();
+// const counter2 = makeCounter();
+// console.log(counter1());
+// console.log(counter1());
+// console.log(counter2());
+
+// ❓What will be the output and why?
+// Output: 
+// 1
+// 2
+// 1
+
+// Hoisting trap:
+
+// console.log(a);
+// var a = 5;
+// console.log(b);
+// let b = 10;
+
+// undefined 
+// Reference Error Cannot access before initialization (Temporal Dead Zone)
