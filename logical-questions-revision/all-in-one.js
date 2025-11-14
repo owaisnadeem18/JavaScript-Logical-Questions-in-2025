@@ -116,3 +116,12 @@
 
 // undefined 
 // Reference Error Cannot access before initialization (Temporal Dead Zone)
+
+// Reference vs Value:
+
+let obj1 = { name: "Ali" };
+let obj2 = obj1;
+obj2.name = "Owais";
+console.log(obj1.name);
+
+// Ali
