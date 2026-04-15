@@ -6,35 +6,33 @@
 
 const array = [4,5,1,2,0,4]
 
-const firstNonRepeatingElement = (a) => {
+const firstNonRepeatingElement = (arr) => {
 
-    let counts = {}
+    let count = {}
 
-    for (let r = 0 ; r < a.length ; r++) {
-        let element = a[r]
+    for (let i = 0 ; i < arr.length ; i++) {
 
-        if (counts[element]) {
-            counts[element]++
-        }
-
-        else {
-            counts[element] = 1
+        if (count[arr[i]]) {
+            count[arr[i]]++
+        } else {
+            count[arr[i]] = 1
         }
 
     }
 
-    for (let i = 0 ; i < a.length ; i++) {
-        let element = a[i]
+    for (let i = 0 ; i < arr.length ; i++) {
+        let element = arr[i]
 
-        if (counts[element] === 1) {
+        if (count[element] === 1) {
             return element
         }
 
     }
 
+    return -1
+
 }
 
 console.log(firstNonRepeatingElement(array))
-
 
 // Expected Output: 5
