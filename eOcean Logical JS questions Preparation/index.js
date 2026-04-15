@@ -6,7 +6,7 @@
 
 const array = [4,5,1,2,0,4]
 
-const firstNonRepeating = (a) => {
+const firstNonRepeatingElement = (a) => {
 
     let counts = {}
 
@@ -34,7 +34,7 @@ const firstNonRepeating = (a) => {
 
 }
 
-console.log(firstNonRepeating(array))
+console.log(firstNonRepeatingElement(array))
 
 
 // Expected Output: 5
