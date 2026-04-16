@@ -19,8 +19,6 @@ const firstNonRepeatingElement = (arr) => {
         if (count[arr[i]] === 1) return arr[i]
     }
 
-
-
 }
 
 
