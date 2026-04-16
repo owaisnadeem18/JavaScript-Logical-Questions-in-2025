@@ -21,8 +21,11 @@ const findFirstNonRepeatingElem = (array) => {
         if (count[array[i]] === 1) {
             return array[i]
         }
+        
     }
 
+    return -1
+    
 };
 
 console.log(findFirstNonRepeatingElem(arr));
