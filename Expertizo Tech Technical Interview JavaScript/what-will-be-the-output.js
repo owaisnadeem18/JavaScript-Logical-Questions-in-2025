@@ -3,7 +3,7 @@
 // let a = [1, 2, 3];
 // let b = [1, 2, 3];
 
-// console.log(a == b);
+// console.log(a == b); // 
 
 // Output => false (Because the memory refrence would not be same for object and array and JavaScript only checks this memory reference)
 
@@ -12,7 +12,7 @@
 // let x = [1, 2, 3];
 // let y = x;
 
-// console.log(x == y); // true (Necause the memory refrence is same , both elements are pointing at the same memory location in memory)
+// console.log(x == y); // true (because the memory refrence is same , both elements are pointing at the same memory location in memory)
 
 
 // 3. --------------------------------
@@ -27,7 +27,6 @@
 // console.log(b);
 
 // Output: [1 , 2] (because b is not a new array , it copies the refrence of array "a" from the memory location) 
-
 
 // 4. --------------------------------
 
