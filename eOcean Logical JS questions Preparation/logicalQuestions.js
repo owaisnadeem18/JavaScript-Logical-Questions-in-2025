@@ -71,22 +71,90 @@
 
 // console.log(swapNumbers(a , b))
 
-const students = [
-  {id: 101,name: "ali Raza",course: "Web Development",semester: "5th"},
-  {id: 102,name: "sara Khan",course: "Mobile App Development",semester: "4th"},
-  {id: 103,name: "Usman Ahmed",course: "Data Science",semester: "6th"},
-  {id: 104,name: "hira Sheikh",course: "Artificial Intelligence",semester: "7th"},
-  {id: 105,name: "Bilal Aslam",course: "Cyber Security",semester: "3rd"}
-];
+// const students = [
+//   {id: 101,name: "ali Raza",course: "Web Development",semester: "5th"},
+//   {id: 102,name: "sara Khan",course: "Mobile App Development",semester: "4th"},
+//   {id: 103,name: "Usman Ahmed",course: "Data Science",semester: "6th"},
+//   {id: 104,name: "hira Sheikh",course: "Artificial Intelligence",semester: "7th"},
+//   {id: 105,name: "Bilal Aslam",course: "Cyber Security",semester: "3rd"}
+// ];
 
-// separate the name of all students in a new array: 
+// // separate the name of all students in a new array: 
 
-const capitalizeName = (studentsArr) => {
+// const capitalizeName = (studentsArr) => {
 
-    let students = studentsArr.map(obj => obj.name[0].toUpperCase() + obj.name.slice(1) )
+//     let students = studentsArr.map(obj => obj.name[0].toUpperCase() + obj.name.slice(1) )
 
-    return students
+//     return students
+
+// }
+
+// console.log(capitalizeName(students))
+
+// Logic Based (Arrays)
+
+// let arr = [1, 2, 2, 3, 4, 4, 5];
+
+// 👉 Without using Set
+// 👉 Find Duplicates 
+
+// let arr = [1, 2, 2, 3, 4, 4, 5];
+
+// const findDuplicates = (array) => {
+
+//     let count = {}
+//     let duplicates_arr_items = []
+
+//     for (let i = 0 ; i < array.length ; i++) {
+//         if (count[array[i]]) {
+//             count[array[i]]++
+//         }        
+//         else {
+//             count[array[i]] = 1
+//         }
+//     }
+
+
+//     // Now , iterate once again and find the duplicates:
+
+//     for (let key in count) {
+//         if (count[key] > 1) {
+//             duplicates_arr_items.push(key)
+//         }
+
+//     }
+
+//     return duplicates_arr_items
+
+// }
+
+// console.log(findDuplicates(arr))
+
+// More cleaner and quite improved way to write the same above code:
+
+
+let arr = [1, 2, 2, 3, 4, 4, 5];
+
+const findDuplicates = (array) => {
+
+    let count = {}
+    let duplicates_arr_items = []
+
+    for (let i = 0 ; i < array.length ; i++) {
+        count[array[i]] = (count[array[i]] || 0) + 1
+    }
+
+    // Now , iterate once again and find the duplicates:
+
+    for (let key in count) {
+        if (count[key] > 1) {
+            duplicates_arr_items.push(Number(key))
+        }
+
+    }
+
+    return duplicates_arr_items
 
 }
 
-console.log(capitalizeName(students))
+console.log(findDuplicates(arr))
