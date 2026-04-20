@@ -84,26 +84,27 @@
 
 // Example of Shallow Copy:
 
-const obj = {
-  name: "Owais",
-  address: {
-    city: "Karachi"
-  }
-};
+// const obj = {
+//   name: "Owais",
+//   address: {
+//     city: "Karachi"
+//   }
+// };
 
-const copy = { ...obj };
+// const copy = { ...obj };
 
-copy.address.city = "Lahore";
+// copy.address.city = "Lahore";
 
-console.log(obj.address.city); // Output: "Lahore" , This is because the spread operator creates a shallow copy of the object. It copies only the top-level properties, but the nested object (address) is still shared by reference. So, when we update copy.address.city, it also updates obj.address.city.
+// console.log(obj.address.city); // Output: "Lahore" , This is because the spread operator creates a shallow copy of the object. It copies only the top-level properties, but the nested object (address) is still shared by reference. So, when we update copy.address.city, it also updates obj.address.city.
 
 // Eample of Deep Copy:
 // Deep Copy
 
-const obj1 = { user: { name: "Owais" } };
+// const obj1 = { user: { name: "Owais" } };
 
-const obj2 = structuredClone(obj1); // structuredClone() is a built-in JavaScript function that creates a deep copy of an object or array, including all nested levels, so the copied data is completely independent from the original.
+// const obj2 = structuredClone(obj1); // structuredClone() is a built-in JavaScript function that creates a deep copy of an object or array, including all nested levels, so the copied data is completely independent from the original.
 
-obj2.user.name = "Ali";
+// obj2.user.name = "Ali";
 
-console.log(obj1.user.name); // Output: "Owais" , This is because structuredClone() creates a deep copy of the object. It copies everything, including all nested levels, so obj2 is completely independent from obj1. Therefore, when we update obj2.user.name, it does not affect obj1.user.name.
+// console.log(obj1.user.name); // Output: "Owais" , This is because structuredClone() creates a deep copy of the object. It copies everything, including all nested levels, so obj2 is completely independent from obj1. Therefore, when we update obj2.user.name, it does not affect obj1.user.name.
+
