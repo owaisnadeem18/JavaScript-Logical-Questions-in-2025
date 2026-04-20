@@ -76,7 +76,13 @@
 
 // 🔑 Golden Rule (Always Remember):
 
-// Shallow copy = Copies one level , all other things inside are shared. 
+// Shallow Copy vs Deep Copy:
+
+// Shallow copy = Copies only the top-level properties, but nested objects are shared by reference. So, if you modify a nested object in the copied array/object, it will also affect the original array/object.
+
+// Deep copy = Copies everything , all levels are copied and nothing is shared.
+
+// Example of Shallow Copy:
 
 const obj = {
   name: "Owais",
@@ -91,3 +97,13 @@ copy.address.city = "Lahore";
 
 console.log(obj.address.city); // Output: "Lahore" , This is because the spread operator creates a shallow copy of the object. It copies only the top-level properties, but the nested object (address) is still shared by reference. So, when we update copy.address.city, it also updates obj.address.city.
 
+// Eample of Deep Copy:
+// Deep Copy
+
+const obj1 = { user: { name: "Owais" } };
+
+const obj2 = structuredClone(obj1); // structuredClone() is a built-in JavaScript function that creates a deep copy of an object or array, including all nested levels, so the copied data is completely independent from the original.
+
+obj2.user.name = "Ali";
+
+console.log(obj1.user.name); // Output: "Owais" , This is because structuredClone() creates a deep copy of the object. It copies everything, including all nested levels, so obj2 is completely independent from obj1. Therefore, when we update obj2.user.name, it does not affect obj1.user.name.
