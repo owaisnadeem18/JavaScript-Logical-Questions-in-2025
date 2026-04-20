@@ -133,28 +133,45 @@
 // More cleaner and quite improved way to write the same above code:
 
 
-let arr = [1, 2, 2, 3, 4, 4, 5];
+// let arr = [1, 2, 2, 3, 4, 4, 5];
 
-const findDuplicates = (array) => {
+// const findDuplicates = (array) => {
 
-    let count = {}
-    let duplicates_arr_items = []
+//     let count = {}
+//     let duplicates_arr_items = []
 
-    for (let i = 0 ; i < array.length ; i++) {
-        count[array[i]] = (count[array[i]] || 0) + 1
+//     for (let i = 0 ; i < array.length ; i++) {
+//         count[array[i]] = (count[array[i]] || 0) + 1
+//     }
+
+//     // Now , iterate once again and find the duplicates:
+
+//     for (let key in count) {
+//         if (count[key] > 1) {
+//             duplicates_arr_items.push(Number(key))
+//         }
+
+//     }
+
+//     return duplicates_arr_items
+
+// }
+
+// console.log(findDuplicates(arr))
+
+let arr = [1, 2, 3, 4];
+
+// 👉 Reverse the array WITHOUT .reverse()
+
+const reverseArray = (array) => {
+    let reversed_arr = []
+
+    for (let i = array.length -1 ; i >= 0  ; i--) {
+        reversed_arr.push(array[i])
     }
 
-    // Now , iterate once again and find the duplicates:
-
-    for (let key in count) {
-        if (count[key] > 1) {
-            duplicates_arr_items.push(Number(key))
-        }
-
-    }
-
-    return duplicates_arr_items
+    return reversed_arr
 
 }
 
-console.log(findDuplicates(arr))
+console.log(reverseArray(arr))
