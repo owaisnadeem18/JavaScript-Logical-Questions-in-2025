@@ -141,6 +141,7 @@
 
 // console.log(typeof undefined); // output: undefined (It is a primitive value that represents the absence of a value or an uninitialized variable. It is also considered a falsy value in JavaScript.)
 
-console.log(0.1 + 0.2 === 0.3); 
+// console.log(0.1 + 0.2 === 0.3); 
 
 // output: false
+
