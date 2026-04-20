@@ -137,8 +137,10 @@
 
 // Mind Bending Questions:
 
-console.log(typeof null); // output: object (Famous JS bug , it was initially in the design of JS , it's value has been assigned as 0 in the memory and it is considered as falsy value but its type is object)
+// console.log(typeof null); // output: object (Famous JS bug , it was initially in the design of JS , it's value has been assigned as 0 in the memory and it is considered as falsy value but its type is object)
 
-console.log(typeof undefined); // output: undefined (It is a primitive value that represents the absence of a value or an uninitialized variable. It is also considered a falsy value in JavaScript.)
+// console.log(typeof undefined); // output: undefined (It is a primitive value that represents the absence of a value or an uninitialized variable. It is also considered a falsy value in JavaScript.)
 
+console.log(0.1 + 0.2 === 0.3); 
 
+// output: false
