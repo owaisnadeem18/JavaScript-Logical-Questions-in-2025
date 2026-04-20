@@ -44,6 +44,9 @@
 
 // console.log(a == b) // Output: false because both of them are stored at different memory locations
 
+// Reason: 
+// Spread Operator creates a new memory location for the new array and it copies all the elements of the original array into the new one. So, both "a" and "b" are stored at different memory locations and they are not equal to each other because “Objects/arrays are compared by reference, not by value. (shallow copy) 
+
 // let a = [1, 2, 3]
 
 // let b = a
@@ -57,10 +60,12 @@
 
 // console.log(a); // output: [1,2,3,4] // "a" will also get changed because both of them i.e "a" & "b" are pointing at the same memory location:
 
-let a = [1, 2, 3];
-let b = [...a];
+// let a = [1, 2, 3];
+// let b = [...a];
 
-b.push(4);
+// b.push(4);
 
-console.log(a); // output: [1,2,3] // "a" will not get changed , because "b" is not pointing towards "a" , "b" has different memory location and "a" has different one.
+// console.log(a); // output: [1,2,3] // "a" will not get changed , because "b" is not pointing towards "a" , "b" has different memory location and "a" has different one.
 
+
+// 
