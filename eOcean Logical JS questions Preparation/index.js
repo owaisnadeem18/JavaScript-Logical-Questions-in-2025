@@ -123,4 +123,14 @@
 // Arrays in JavaScript are reference types
 // So, that's why both are stored in different memory location
 
-// Object & Key trap
+// Object & Key trap:
+
+let obj = {};
+
+obj[{}] = "Hello";
+obj[{}] = "World";
+
+console.log(obj); // Output: { '[object Object]': 'World' }
+
+console.log({}.toString()); 
+// "[object Object]"
