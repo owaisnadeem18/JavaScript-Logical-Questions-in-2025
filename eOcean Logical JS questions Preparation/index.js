@@ -108,3 +108,9 @@
 
 // console.log(obj1.user.name); // Output: "Owais" , This is because structuredClone() creates a deep copy of the object. It copies everything, including all nested levels, so obj2 is completely independent from obj1. Therefore, when we update obj2.user.name, it does not affect obj1.user.name.
 
+// let arr = [1, 2, 3, 4];
+
+// arr.length = 0;
+
+// console.log(arr); // Output: [] (The length property of an array can be set to 0 to clear the array. This effectively removes all elements from the array, resulting in an empty array.)
+
