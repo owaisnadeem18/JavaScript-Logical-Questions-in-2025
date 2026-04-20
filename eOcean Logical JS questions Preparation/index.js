@@ -114,3 +114,13 @@
 
 // console.log(arr); // Output: [] (The length property of an array can be set to 0 to clear the array. This effectively removes all elements from the array, resulting in an empty array.)
 
+// Equality Trap Interview Question: 
+
+// console.log([] == []); // false 
+// console.log([] === []); // false
+
+// Reason: 
+// Arrays in JavaScript are reference types
+// So, that's why both are stored in different memory location
+
+// Object & Key trap
