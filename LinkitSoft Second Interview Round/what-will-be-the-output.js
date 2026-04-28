@@ -77,15 +77,36 @@ const arr2 = [...arr1]
 
 // conditional API call (if false trap)
 
-console.log("Start");
+// console.log("Start");
 
-if (true) {
-    async function fetchAPI() {
-        await fetch("https://fakestoreapi.com/products/")
-        .then(() => console.log("Fetched"));
-    }
-    fetchAPI();
+// if (true) {
+//     async function fetchAPI() {
+//         await fetch("https://fakestoreapi.com/products/")
+//         .then(() => console.log("Fetched"));
+//     }
+//     fetchAPI();
+// }
+
+// console.log("End");
+// // ❓ Question:
+// // What will be the output of the above code?
+
+// Output: 
+
+// Start
+// End
+// Fetched
+
+// async function + return confusion
+
+async function getData() {
+  console.log("A");
+
+  return fetch("https://fakestoreapi.com/products/");
 }
 
-console.log("End");
-// ❓ Question:
+console.log("B");
+
+getData().then(() => console.log("C"));
+
+console.log("D");
