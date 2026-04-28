@@ -68,7 +68,24 @@ const arr2 = [...arr1]
 // console.log(JSON.stringify(arr1)) // Output: [1,2,3]
 // console.log(JSON.stringify(arr2)) // Output: [1,2,3]
 
-const obj = { name: "Ali", age: 25 };
+// const obj = { name: "Ali", age: 25 };
 
-console.log(typeof obj) // Output: object
-console.log(typeof JSON.stringify(obj)); // Output: string
+// console.log(typeof obj) // Output: object
+// console.log(typeof JSON.stringify(obj)); // Output: string
+
+// console.log(typeof undefined)
+
+// conditional API call (if false trap)
+
+console.log("Start");
+
+if (true) {
+    async function fetchAPI() {
+        await fetch("https://fakestoreapi.com/products/")
+        .then(() => console.log("Fetched"));
+    }
+    fetchAPI();
+}
+
+console.log("End");
+// ❓ Question:
