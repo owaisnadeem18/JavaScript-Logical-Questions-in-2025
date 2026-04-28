@@ -32,15 +32,23 @@
 
 // output: 1 , 2 , 3 
 
-Promise.resolve(1)
-  .then((x) => x + 1)
-  .then((x) => {
-    console.log(x);
-    return x + 1;
-  })
-  .then(console.log);
+// Promise.resolve(1)
+//   .then((x) => x + 1)
+//   .then((x) => {
+//     console.log(x);
+//     return x + 1;
+//   })
+//   .then(console.log);
 
 // Output: 2 , 3
 
 // Explanation: 
 // The first .then() receives the resolved value 1 and adds 1 to it, resulting in 2. The second .then() receives this value (2), logs it to the console, and then returns 3. The final .then() receives the value 3 and logs it to the console.
+
+// const arr = [1, 2, 3, 4, 5 , 6 , 7 , 8 , 9 , 10];
+
+// const [a, b, ...rest] = arr;
+
+// const sum = arr.reduce((acc, val) => acc + val, 0);
+
+// console.log(sum)
