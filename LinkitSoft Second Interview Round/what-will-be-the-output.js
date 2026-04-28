@@ -52,3 +52,23 @@
 // const sum = arr.reduce((acc, val) => acc + val, 0);
 
 // console.log(sum)
+
+const arr1 = [1, 2, 3];
+
+const arr2 = [...arr1]
+
+// console.log(arr1 == arr2) // Output: false because both of them are stored at different memory locations
+
+// // Reason: 
+// // Spread Operator creates a new memory location for the new array and it copies all the elements of the original array into the new one. So, both "arr1" and "arr2" are stored at different memory locations and they are not equal to each other because Objects/arrays are compared by reference, not by value. (shallow copy)
+
+// console.log(arr1 === arr2) // reference check
+// console.log(JSON.stringify(arr1) === JSON.stringify(arr2)) // value check
+
+// console.log(JSON.stringify(arr1)) // Output: [1,2,3]
+// console.log(JSON.stringify(arr2)) // Output: [1,2,3]
+
+const obj = { name: "Ali", age: 25 };
+
+console.log(typeof obj) // Output: object
+console.log(typeof JSON.stringify(obj)); // Output: string
