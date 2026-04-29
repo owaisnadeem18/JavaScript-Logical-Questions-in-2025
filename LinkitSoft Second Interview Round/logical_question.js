@@ -53,27 +53,54 @@
 // Input: [2, 7, 11, 15], target = 9
 // Output: [2, 7]
 
-const arr = [2, 7, 11, 15]
-let target = 9 
+// const arr = [2, 7, 11, 15]
+// let target = 9 
 
-const twoSum = (array) => {
+// const twoSum = (array) => {
     
-    const obj = {}
+//     const obj = {}
     
+//     for (let i = 0 ; i < array.length ; i++) {
+//         let elem = array[i]
+
+//         let complement = target - elem
+
+//         if (obj[complement] !== undefined) {
+//             return [obj[complement] , i]
+//         }
+
+//         obj[elem] = i
+
+//     }
+
+// }
+
+// console.log(twoSum(arr))
+
+// --------------------- Group Anagram ------------------------
+
+const arr = ["eat", "tea", "tan", "ate", "nat", "bat"]
+
+const groupAnagram = (array) => {
+    
+    let obj = {}
+
     for (let i = 0 ; i < array.length ; i++) {
+        
         let elem = array[i]
+        let key = elem.split("").sort().join("")
 
-        let complement = target - elem
-
-        if (obj[complement] !== undefined) {
-            return [obj[complement] , i]
+        if (!obj[key]) {
+            obj[key] = []
         }
 
-        obj[elem] = i
+        obj[key].push(elem)
 
     }
 
+    return Object.values(obj)
+
+
 }
 
-console.log(twoSum(arr))
-
+console.log(groupAnagram(arr))
