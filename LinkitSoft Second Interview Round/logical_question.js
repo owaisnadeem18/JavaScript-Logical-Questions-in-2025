@@ -136,19 +136,33 @@ arr1 = [1, 2, 3, 4, 5]
 
 arr2 = [4, 5, 6, 7, 8]
 
-const getIntersection = (array1 , array2) => {
+// const getIntersection = (array1 , array2) => {
 
-    let intersection = []
+//     let intersection = []
     
 
-    for (let i = 0 ; i < array2.length ; i++) {
-        if (array1.includes(array2[i])) {
-            intersection.push(array2[i])
-        }
+//     for (let i = 0 ; i < array2.length ; i++) {
+//         if (array1.includes(array2[i])) {
+//             intersection.push(array2[i])
+//         }
 
-    }
+//     }
 
-    return intersection
+//     return intersection
+
+// }
+
+// console.log(getIntersection(arr1 , arr2))
+
+// Following is the more optimized way to solve the above problem:
+
+const getIntersection = (arr1 , arr2) => {
+    
+    // first covert the first array into set:
+    let set1 = new Set(arr1)
+
+    return arr2.filter(item => set1.has(item))
+
 
 }
 
