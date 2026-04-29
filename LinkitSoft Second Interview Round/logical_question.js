@@ -107,25 +107,49 @@
 
 // Two sum problem: 
 
-const arr = [2, 7, 11, 15]
+// const arr = [2, 7, 11, 15]
 
-const twoSum = (array) => {
+// const twoSum = (array) => {
     
-    let obj = {}
-    let target = 9
+//     let obj = {}
+//     let target = 9
 
-    for (let i = 0 ; i < array.length ; i++) {
+//     for (let i = 0 ; i < array.length ; i++) {
         
-        let elem = array[i]
-        let complement = target - elem
+//         let elem = array[i]
+//         let complement = target - elem
         
-        if (obj[complement] !== undefined) {
-            return [obj[complement] , i]
+//         if (obj[complement] !== undefined) {
+//             return [obj[complement] , i]
+//         }
+
+//         obj[elem] = i
+        
+//     }
+// }
+
+// console.log(twoSum(arr))
+
+// Given two arrays, return an array of elements that are present in both.
+
+arr1 = [1, 2, 3, 4, 5]
+
+arr2 = [4, 5, 6, 7, 8]
+
+const getIntersection = (array1 , array2) => {
+
+    let intersection = []
+    
+
+    for (let i = 0 ; i < array2.length ; i++) {
+        if (array1.includes(array2[i])) {
+            intersection.push(array2[i])
         }
 
-        obj[elem] = i
-        
     }
+
+    return intersection
+
 }
 
-console.log(twoSum(arr))
+console.log(getIntersection(arr1 , arr2))
