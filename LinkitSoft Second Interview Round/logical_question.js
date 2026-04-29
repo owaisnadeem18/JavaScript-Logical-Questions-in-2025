@@ -156,14 +156,38 @@ arr2 = [4, 5, 6, 7, 8]
 
 // Following is the more optimized way to solve the above problem:
 
-const getIntersection = (arr1 , arr2) => {
+// const getIntersection = (arr1 , arr2) => {
     
-    // first covert the first array into set:
-    let set1 = new Set(arr1)
+//     // first covert the first array into set:
+//     let set1 = new Set(arr1)
 
-    return arr2.filter(item => set1.has(item))
+//     return arr2.filter(item => set1.has(item))
+
+
+// }
+
+// console.log(getIntersection(arr1 , arr2))
+
+const arr = [1, 2, 3, 2, 4, 5, 1 , 8 , 9 , 9 , 9]
+
+const findingDuplicates = (array) => {
+    const obj = {}
+    const duplicates_arr = []
+
+    for(let i = 0 ; i < array.length ; i++) {
+        let elem = array[i]
+
+        obj[elem] = (obj[elem] || 0) + 1
+
+        if (obj[elem] === 2) {
+            duplicates_arr.push(elem)
+        }
+
+    }
+
+    return duplicates_arr
 
 
 }
 
-console.log(getIntersection(arr1 , arr2))
+console.log(findingDuplicates(arr))
